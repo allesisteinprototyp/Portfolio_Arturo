@@ -1,0 +1,1446 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Projektportfolio von Arturo Iturriaga García: Elektrotechnik, Embedded Systems und technische Projektleitung. Projekte mit echten Auftraggebern, echter Technik und Originalfotos.">
+<meta name="author" content="Arturo Iturriaga García">
+<meta name="theme-color" content="#15181c">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Arturo Iturriaga · Projektportfolio">
+<meta property="og:description" content="Elektrotechnik, Embedded Systems und technische Projektleitung. 15 Projekte, 14 Länder, Originalfotos von den Einsätzen.">
+<meta property="og:image" content="images/seilerei-hero.jpg">
+<meta property="og:url" content="https://allesisteinprototyp.github.io/Portfolio_Arturo/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://allesisteinprototyp.github.io/Portfolio_Arturo/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#128296;</text></svg>">
+<title>Arturo Iturriaga · Projektportfolio</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&amp;family=Work+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&amp;display=swap">
+<style>
+  :root{
+    /* dark is this page's default/brand identity; :root[data-theme="light"] below overrides */
+    --bg:#15181c; --panel:#1b1f24; --panel-2:#1f242a; --panel-3:#252b31;
+    --text:#f2efe8; --text-dim:#c6c1b6; --text-faint:#9a948a;
+    --amber:#f2a154; --amber-dim:#7a5a34; --amber-tint:rgba(242,161,84,.09);
+    --teal:#5fd3c4; --teal-dim:#33564f; --teal-tint:rgba(95,211,196,.08);
+    --rule:#2b3036; --rule-soft:#23282d;
+    --paper:#eee7d8; --paper-ink:#2a241c;
+  }
+  :root[data-theme="light"]{
+    --bg:#faf8f4; --panel:#ffffff; --panel-2:#f3efe6; --panel-3:#ece6d8;
+    --text:#221f19; --text-dim:#3f3a31; --text-faint:#635e53;
+    --amber:#b5701f; --amber-dim:#d9a66b; --amber-tint:rgba(181,112,31,.08);
+    --teal:#2d7268; --teal-dim:#8fc4bb; --teal-tint:rgba(45,114,104,.08);
+    --rule:#ddd6c4; --rule-soft:#e8e2d2;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:'Work Sans', Arial, sans-serif;
+    -webkit-font-smoothing:antialiased;
+    transition:background .2s ease, color .2s ease;
+  }
+  .theme-toggle{
+    position:fixed; top:18px; right:18px; z-index:60;
+    display:flex; align-items:center; gap:6px; background:var(--panel-2); border:1px solid var(--rule);
+    border-radius:20px; padding:6px 8px; cursor:pointer; color:var(--text-dim); font-family:'IBM Plex Mono',monospace;
+    font-size:.7rem;
+  }
+  .theme-toggle:hover{border-color:var(--amber); color:var(--amber);}
+  .theme-toggle svg{width:15px; height:15px;}
+  @media (max-width:560px){ .theme-toggle{top:10px; right:10px; padding:5px 7px;} .theme-toggle .tt-label{display:none;} }
+  .lang-toggle{
+    position:fixed; top:18px; right:118px; z-index:60;
+    display:flex; align-items:center; gap:6px; background:var(--panel-2); border:1px solid var(--rule);
+    border-radius:20px; padding:6px 10px; cursor:pointer; color:var(--text-dim); font-family:'IBM Plex Mono',monospace;
+    font-size:.7rem; font-weight:600;
+  }
+  .lang-toggle:hover{border-color:var(--amber); color:var(--amber);}
+  .lang-toggle svg{width:15px; height:15px;}
+  @media (max-width:560px){ .lang-toggle{top:10px; right:76px; padding:5px 7px; gap:4px;} }
+  ::selection{background:var(--amber); color:#1a1400;}
+  a{color:var(--teal); font-weight:500;}
+  .wrap{max-width:980px; margin:0 auto; padding:0 20px 100px;}
+  .icon{width:16px; height:16px; display:inline-block; vertical-align:-3px; margin-right:7px; color:inherit;}
+
+  /* ---------- Hero ---------- */
+  header.hero{
+    padding:56px 20px 0; border-bottom:1px solid var(--rule);
+    background:
+      radial-gradient(720px 320px at 85% -10%, var(--amber-tint), transparent 60%),
+      radial-gradient(600px 280px at 5% 0%, var(--teal-tint), transparent 60%);
+  }
+  .hero-inner{max-width:980px; margin:0 auto; padding-bottom:40px;}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace; font-size:.72rem; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--amber); margin-bottom:14px; display:flex; align-items:center; gap:10px;
+  }
+  .eyebrow::before{content:""; width:22px; height:1px; background:var(--amber-dim);}
+  h1{
+    font-family:'Barlow Semi Condensed', sans-serif; font-weight:700;
+    font-size:clamp(2.2rem, 5.4vw, 3.6rem); margin:0 0 6px; letter-spacing:.01em;
+    line-height:1.03; text-wrap:balance;
+  }
+  .role-line{font-size:1.02rem; color:var(--text-dim); margin-bottom:22px; max-width:60ch;}
+  .role-line b{color:var(--text); font-weight:600;}
+  .intro{font-size:.94rem; line-height:1.7; color:var(--text-dim); max-width:66ch; margin-bottom:8px;}
+  .contact-row{
+    display:flex; gap:18px; flex-wrap:wrap; margin-top:22px; font-family:'IBM Plex Mono',monospace;
+    font-size:.75rem; color:var(--text-faint);
+  }
+
+  /* ---------- Kurzprofil stats ---------- */
+  .stats{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--rule);
+    border:1px solid var(--rule); margin:0;
+  }
+  .stat{background:var(--panel); padding:18px 16px; display:flex; align-items:center; gap:12px;}
+  .stat .icon{width:22px; height:22px; color:var(--amber); flex:none; margin:0;}
+  .stat .n{font-family:'Barlow Semi Condensed',sans-serif; font-weight:700; font-size:1.5rem; color:var(--amber); line-height:1;}
+  .stat .l-main{font-family:'Barlow Semi Condensed',sans-serif; font-weight:600; font-size:1.05rem; color:var(--amber); margin-top:2px; line-height:1.25;}
+  .stat .l-sub{font-size:.7rem; color:var(--text-faint); margin-top:4px; line-height:1.4;}
+  @media (max-width:640px){ .stats{grid-template-columns:1fr;} }
+
+  /* ---------- Skills overview ---------- */
+  .skillgrid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--rule); border:1px solid var(--rule); border-top:none;}
+  @media (max-width:760px){ .skillgrid{grid-template-columns:1fr 1fr;} }
+  @media (max-width:480px){ .skillgrid{grid-template-columns:1fr;} }
+  .skillcat{background:var(--panel); padding:18px 18px 20px; border-top:2px solid var(--amber);}
+  .skillcat:nth-child(3n+2){border-top-color:var(--teal);}
+  .skillcat:nth-child(3n+3){border-top-color:var(--amber-dim);}
+  .skillcat h3{
+    font-family:'IBM Plex Mono',monospace; font-size:.68rem; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--text-faint); margin:0 0 10px; display:flex; align-items:center;
+  }
+  .skillcat .chips{display:flex; flex-wrap:wrap; gap:6px;}
+  .skillcat .chips span{font-size:.74rem; color:var(--text-dim); border:1px solid var(--rule); background:var(--panel-2); padding:3px 8px; border-radius:3px; cursor:pointer; transition:border-color .15s ease, color .15s ease, background .15s ease;}
+  .skillcat .chips span:hover{border-color:var(--amber); color:var(--amber);}
+  .skillcat .chips span.active{background:var(--amber); color:#1a1400; border-color:var(--amber); font-weight:600;}
+
+  /* ---------- skill filter ---------- */
+  .filter-bar{display:none; align-items:center; gap:10px; margin:0 0 18px; font-family:'IBM Plex Mono',monospace; font-size:.74rem; color:var(--text-dim); flex-wrap:wrap;}
+  .filter-bar.active{display:flex;}
+  .filter-bar b{color:var(--amber);}
+  .filter-bar .clear-filter{cursor:pointer; color:var(--amber); border:1px solid var(--amber-dim); border-radius:20px; padding:3px 10px; background:var(--amber-tint);}
+  .filter-bar .clear-filter:hover{border-color:var(--amber);}
+  .proj.filtered-out{display:none;}
+  .filter-empty{display:none; font-size:.82rem; color:var(--text-faint); margin:0 0 18px;}
+  .filter-empty.show{display:block;}
+
+  /* ---------- Section chrome ---------- */
+  section.block{padding:52px 0 8px;}
+  .block-head{display:flex; align-items:baseline; gap:14px; margin-bottom:6px;}
+  h2.section-title{
+    font-family:'Barlow Semi Condensed', sans-serif; font-weight:600; font-size:1.5rem;
+    margin:0; letter-spacing:.01em;
+  }
+  .section-sub{font-size:.82rem; color:var(--text-faint); margin:0 0 28px; max-width:64ch; line-height:1.6;}
+  .count-tag{font-family:'IBM Plex Mono',monospace; font-size:.7rem; color:var(--text-faint); border:1px solid var(--rule); padding:2px 8px; border-radius:20px;}
+
+  /* ---------- Project cards ---------- */
+  .proj{
+    border:1px solid var(--rule); border-radius:8px; margin-bottom:16px; overflow:hidden;
+    background:var(--panel);
+  }
+  .proj > summary{
+    list-style:none; cursor:pointer; padding:20px 22px; display:grid;
+    grid-template-columns:1fr auto; gap:14px; align-items:start; position:relative;
+  }
+  .proj > summary::-webkit-details-marker{display:none;}
+  .proj > summary:hover{background:var(--panel-2);}
+  .proj > summary:focus-visible{outline:2px solid var(--amber); outline-offset:-2px;}
+  .p-head{display:flex; flex-direction:column; gap:6px; min-width:0;}
+  .p-titlerow{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;}
+  .p-title{font-family:'Barlow Semi Condensed',sans-serif; font-weight:600; font-size:1.22rem; color:var(--text);}
+  .p-when{font-family:'IBM Plex Mono',monospace; font-size:.7rem; color:var(--amber); white-space:nowrap; font-variant-numeric:tabular-nums;}
+  .p-client{font-size:.79rem; color:var(--teal); font-family:'IBM Plex Mono',monospace; font-weight:600;}
+  .p-short{font-size:.87rem; color:var(--text-dim); line-height:1.55; max-width:64ch; margin-top:2px;}
+  .p-tags{display:flex; flex-wrap:wrap; gap:6px; margin-top:8px;}
+  .p-tags span{font-size:.68rem; font-family:'IBM Plex Mono',monospace; color:var(--text-dim); border:1px solid var(--rule); padding:2px 7px; border-radius:3px;}
+  .chev{
+    width:26px; height:26px; border-radius:50%; border:1px solid var(--rule); flex:none;
+    display:flex; align-items:center; justify-content:center; color:var(--text-faint);
+    transition:transform .22s ease, color .2s ease, border-color .2s ease; margin-top:2px;
+  }
+  .proj[open] .chev{transform:rotate(45deg); color:var(--amber); border-color:var(--amber-dim);}
+  @media (prefers-reduced-motion:reduce){ .chev{transition:none;} }
+
+  .p-body{padding:4px 22px 26px; border-top:1px solid var(--rule-soft);}
+  .p-grid{display:block; margin-top:20px;}
+  @media (min-width:860px){
+    .p-grid{display:grid; grid-template-columns:1.5fr 1fr; grid-template-areas:"text main" "extra extra"; gap:6px 28px; align-items:start;}
+    .p-long{grid-area:text;}
+    .p-gallery{grid-area:main; margin-top:0;}
+    .p-gallery-extra{grid-area:extra;}
+  }
+  .p-long p{font-size:.89rem; line-height:1.72; color:var(--text); margin:0 0 14px; max-width:74ch;}
+  .p-long p:last-child{margin-bottom:0;}
+  .p-long ul{margin:0 0 14px; padding-left:1.15em; max-width:62ch;}
+  .p-long li{font-size:.87rem; line-height:1.6; color:var(--text); margin-bottom:5px;}
+
+  .p-gallery{display:flex; flex-direction:column; gap:10px; margin-top:22px;}
+  .p-gallery .pair{display:grid; grid-template-columns:1fr 1fr; gap:8px;}
+  .p-gallery button.thumb, .p-gallery-extra button.thumb{
+    all:unset; cursor:zoom-in; border-radius:7px; overflow:hidden; border:1px solid var(--rule);
+    display:block; position:relative;
+  }
+  .p-gallery button.thumb img, .p-gallery-extra button.thumb img{width:100%; display:block; background:var(--panel-2); object-fit:cover;}
+  .p-gallery button.thumb .zoom-hint, .p-gallery-extra button.thumb .zoom-hint{
+    position:absolute; right:6px; bottom:6px; background:rgba(21,24,28,.72); color:var(--text);
+    font-family:'IBM Plex Mono',monospace; font-size:.65rem; padding:3px 7px; border-radius:3px;
+    opacity:0; transition:opacity .15s ease;
+  }
+  .p-gallery button.thumb:hover .zoom-hint, .p-gallery button.thumb:focus-visible .zoom-hint{opacity:1;}
+  .p-gallery figcaption{font-size:.72rem; color:var(--text-faint); line-height:1.5; margin-top:-2px;}
+
+  .p-gallery-extra{margin-top:14px; display:grid; grid-template-columns:repeat(auto-fill,minmax(84px,1fr)); gap:8px;}
+  .p-gallery-extra button.thumb img{aspect-ratio:1/1; object-fit:cover;}
+  .p-gallery-extra button.thumb .zoom-hint{display:none;}
+
+  .spec{margin-top:4px;}
+  .spec dt{font-family:'IBM Plex Mono',monospace; font-size:.68rem; letter-spacing:.06em; text-transform:uppercase; color:var(--text-faint); margin:16px 0 6px;}
+  .spec dt:first-child{margin-top:0;}
+  .spec dd{margin:0; font-size:.83rem; color:var(--text-dim); line-height:1.6;}
+  .cert{display:inline-flex; align-items:center; gap:6px; font-size:.76rem; color:var(--amber); background:var(--amber-tint); border:1px solid var(--amber-dim); padding:3px 9px; border-radius:20px; margin:2px 6px 2px 0;}
+
+  /* paper excerpt block */
+  .paper-excerpt{
+    background:var(--paper); color:var(--paper-ink); border-radius:6px; padding:22px 24px 20px;
+    margin-top:18px; position:relative; overflow:hidden;
+  }
+  .paper-excerpt::before{
+    content:"TEASER · AUSZUG"; position:absolute; top:10px; right:14px;
+    font-family:'IBM Plex Mono',monospace; font-size:.6rem; letter-spacing:.1em; color:rgba(42,36,28,.35);
+  }
+  .paper-excerpt h4{
+    font-family:'Source Serif 4',Georgia,serif; font-weight:500; font-size:1.02rem; margin:0 0 4px; line-height:1.35; max-width:46ch;
+  }
+  .paper-meta{font-size:.74rem; color:rgba(42,36,28,.6); margin-bottom:14px;}
+  .paper-meta i{font-style:italic;}
+  .paper-excerpt p{
+    font-family:'Source Serif 4',Georgia,serif; font-size:.86rem; line-height:1.62; margin:0 0 10px; columns:2; column-gap:22px; max-width:none;
+  }
+  @media (max-width:640px){ .paper-excerpt p{columns:1;} }
+  .paper-note{
+    font-family:'IBM Plex Mono',monospace; font-size:.68rem; color:rgba(42,36,28,.55);
+    border-top:1px dashed rgba(42,36,28,.25); padding-top:10px; margin-top:8px; line-height:1.6;
+  }
+  .codepics{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:14px;}
+  .codepics button.thumb{all:unset; cursor:zoom-in; display:block; position:relative;}
+  .codepics img{width:100%; border-radius:6px; border:1px solid var(--rule); display:block;}
+  @media (max-width:600px){ .codepics{grid-template-columns:1fr 1fr;} }
+
+  /* workshop grid section */
+  .workshop-grid{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:18px;}
+  @media (max-width:600px){ .workshop-grid{grid-template-columns:1fr;} }
+  .workshop-card{border:1px solid var(--rule); border-radius:8px; padding:14px; background:var(--panel);}
+  .workshop-card > button.thumb:first-child img, .workshop-card .pair:first-child img{height:210px;}
+  .workshop-card img{width:100%; height:210px; object-fit:cover; border-radius:6px; border:1px solid var(--rule); display:block; margin-bottom:8px;}
+  .workshop-card .pair{display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-bottom:8px;}
+  .workshop-card .pair img{height:210px;}
+  .workshop-card button.thumb{all:unset; cursor:zoom-in; display:block; width:100%; position:relative;}
+  .workshop-card .extra-row{display:grid; grid-template-columns:repeat(auto-fill,minmax(64px,1fr)); gap:6px; margin-bottom:8px;}
+  .workshop-card .extra-row img{height:64px; margin-bottom:0;}
+  .workshop-card p{font-size:.82rem; color:var(--text-dim); line-height:1.55; margin:0;}
+  .workshop-card b{display:block; font-size:.86rem; color:var(--amber); font-family:'IBM Plex Mono',monospace; margin-bottom:5px; text-transform:uppercase; letter-spacing:.04em;}
+
+  /* ehrenamt list */
+  .ehrenamt-list{display:flex; flex-direction:column; gap:14px;}
+  .eh-item{border:1px solid var(--rule); border-radius:7px; padding:14px 18px; background:var(--panel);}
+  .eh-item .row{display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; align-items:baseline;}
+  .eh-item .org{font-family:'Barlow Semi Condensed',sans-serif; font-weight:600; font-size:1.02rem;}
+  .eh-item .when{font-family:'IBM Plex Mono',monospace; font-size:.7rem; color:var(--amber); white-space:nowrap;}
+  .eh-item p{font-size:.83rem; color:var(--text-dim); margin:6px 0 0; line-height:1.55;}
+  .eh-item .new-badge{font-size:.62rem; font-family:'IBM Plex Mono',monospace; color:var(--teal); border:1px solid var(--teal-dim); background:var(--teal-tint); padding:1px 6px; border-radius:20px; margin-left:8px; vertical-align:middle;}
+
+  /* study cards */
+  .study-grid{display:flex; flex-direction:column; gap:14px; margin-top:18px;}
+  .study-card{width:100%; border:1px solid var(--rule); border-radius:8px; padding:18px; background:var(--panel);}
+  @media (min-width:720px){ .study-grid{flex-direction:row; flex-wrap:wrap;} .study-card{flex:1 1 260px; max-width:320px; width:auto;} }
+  .study-card .icon{width:24px; height:24px; color:var(--teal); margin:0 0 10px; display:block;}
+  .study-card .degree{font-family:'Barlow Semi Condensed',sans-serif; font-weight:700; font-size:1.08rem; color:var(--text); display:block;}
+  .study-card .org{font-size:.78rem; color:var(--text-dim); display:block; margin-top:2px;}
+  .study-card .when{font-family:'IBM Plex Mono',monospace; font-size:.68rem; color:var(--amber); margin:4px 0 8px; display:block;}
+  .study-card p{font-size:.8rem; color:var(--text-dim); line-height:1.5; margin:0;}
+
+  /* interests */
+  .interests-grid{display:flex; flex-wrap:wrap; gap:14px; margin-top:18px;}
+  .interest{flex:0 1 142px; width:142px; border:1px solid var(--rule); border-radius:8px; padding:18px 10px; text-align:center; background:var(--panel); overflow:hidden;}
+  .interest .icon{width:26px; height:26px; margin:0 0 10px; color:var(--teal); display:block; margin-left:auto; margin-right:auto;}
+  /* Hirsch-Logo als Maske, damit es exakt dieselbe Farbe traegt wie alle anderen Icons (hell + dunkel) */
+  .interest .icon-deer{
+    width:23px; height:34px; background-color:currentColor; color:var(--teal);
+    -webkit-mask:url(images/deer-logo.png) center/contain no-repeat;
+    mask:url(images/deer-logo.png) center/contain no-repeat;
+  }
+  .interest span{font-size:.76rem; color:var(--text-dim); line-height:1.4; display:block; overflow-wrap:anywhere; hyphens:auto;}
+
+  footer.pf{
+    margin-top:60px; padding:34px 0 10px; border-top:1px solid var(--rule);
+    font-size:.76rem; color:var(--text-faint); display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+  }
+
+  /* ---------- Lightbox ---------- */
+  .lightbox{
+    position:fixed; inset:0; background:rgba(10,11,13,.92); display:none;
+    align-items:center; justify-content:center; z-index:100; padding:40px 20px;
+  }
+  .lightbox.open{display:flex;}
+  .lightbox figure{margin:0; max-width:min(1100px,92vw); max-height:88vh; display:flex; flex-direction:column; gap:10px; align-items:center;}
+  .lightbox img{max-width:100%; max-height:76vh; border-radius:8px; border:1px solid var(--rule); object-fit:contain;}
+  .lightbox figcaption{color:var(--text-dim); font-size:.82rem; text-align:center; max-width:70ch;}
+  .lb-btn{
+    position:absolute; background:var(--panel-2); border:1px solid var(--rule); color:var(--text);
+    width:42px; height:42px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+    cursor:pointer; font-size:1.1rem;
+  }
+  .lb-btn:hover{border-color:var(--amber); color:var(--amber);}
+  .lb-close{top:22px; right:22px;}
+  .lb-prev{left:16px; top:50%; transform:translateY(-50%);}
+  .lb-next{right:16px; top:50%; transform:translateY(-50%);}
+  .lb-count{
+    font-family:'IBM Plex Mono',monospace; font-size:.7rem; color:var(--text-faint); text-align:center;
+  }
+  @media (max-width:640px){ .lb-prev,.lb-next{width:36px; height:36px;} }
+
+  /* ---------- Image editor ---------- */
+  .edit-toggle{
+    margin-left:auto; font-family:'IBM Plex Mono',monospace; font-size:.7rem; color:var(--text-dim);
+    background:var(--panel-2); border:1px solid var(--rule); border-radius:20px; padding:5px 12px; cursor:pointer;
+  }
+  .edit-toggle:hover{border-color:var(--amber); color:var(--amber);}
+  .edit-toggle[hidden]{display:none;}
+  .editing-images button.thumb{cursor:default;}
+  .mark-x{
+    position:absolute; top:6px; right:6px; width:26px; height:26px; border-radius:50%;
+    background:rgba(21,24,28,.75); color:#fff; display:flex; align-items:center; justify-content:center;
+    font-size:.8rem; z-index:2; border:1px solid rgba(255,255,255,.4);
+  }
+  .mark-x:hover{background:#c0392b;}
+  .mark-star{
+    position:absolute; top:6px; left:6px; width:26px; height:26px; border-radius:50%;
+    background:rgba(21,24,28,.75); color:#fff; display:flex; align-items:center; justify-content:center;
+    font-size:.85rem; z-index:2; border:1px solid rgba(255,255,255,.4);
+  }
+  .mark-star:hover{background:var(--amber); color:#1a1400;}
+  button.thumb.marked-remove img{opacity:.3; filter:grayscale(1);}
+  button.thumb.marked-remove::after{
+    content:"wird entfernt"; position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+    color:#fff; font-family:'IBM Plex Mono',monospace; font-size:.7rem; background:rgba(192,57,43,.35); z-index:1;
+  }
+  .edit-savebar{
+    position:fixed; left:50%; transform:translateX(-50%); bottom:18px; z-index:70;
+    background:var(--panel-2); border:1px solid var(--rule); border-radius:10px; padding:10px 14px;
+    display:flex; align-items:center; gap:14px; font-size:.8rem; color:var(--text-dim);
+    box-shadow:0 8px 24px rgba(0,0,0,.35);
+  }
+  .edit-savebar[hidden]{display:none;}
+  .edit-cancel, .edit-save{
+    font-family:'IBM Plex Mono',monospace; font-size:.72rem; border-radius:20px; padding:6px 14px; cursor:pointer; border:1px solid var(--rule);
+  }
+  .edit-cancel{background:transparent; color:var(--text-dim);}
+  .edit-save{background:var(--amber); color:#1a1400; border-color:var(--amber); font-weight:600;}
+  .edit-save:disabled{opacity:.6; cursor:default;}
+</style>
+
+</head>
+<body>
+<button class="lang-toggle" id="langToggle" aria-label="Sprache wechseln / switch language" type="button">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.6 4 5.7 4 9s-1.5 6.4-4 9c-2.5-2.6-4-5.7-4-9s1.5-6.4 4-9z"></path></svg>
+  <span id="langLabel">EN</span>
+</button>
+<button class="theme-toggle" id="themeToggle" aria-label="Hell/Dunkel umschalten" type="button">
+  <svg id="ttIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+  <span class="tt-label" id="ttLabel">Hell</span>
+</button>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow" data-en="Project Portfolio · As of September 2026" data-de="Projektportfolio · Stand September 2026">Projektportfolio · Stand September 2026</div>
+    <h1>Arturo Iturriaga García</h1>
+    <div class="role-line" data-en="Electrical engineering, embedded systems &amp; technical project management." data-de="Elektrotechnik, Embedded Systems &amp;amp; technische Projektleitung.">Elektrotechnik, Embedded Systems &amp; technische Projektleitung.</div>
+    <p class="intro" data-en="From the research lab to the concert stage to the logistics warehouse: every entry below is a standalone project with a real client, real technology, and real photos of the work itself." data-de="Vom Forschungslabor über die Konzertbühne bis zur Logistikhalle: jede Zeile unten ist ein eigenständiges Projekt mit echtem Auftraggeber, echter Technik und echten Fotos von der Arbeit selbst.">Vom Forschungslabor über die Konzertbühne bis zur Logistikhalle: jede Zeile unten ist ein eigenständiges Projekt mit echtem Auftraggeber, echter Technik und echten Fotos von der Arbeit selbst.</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 9h18M9 4v16"></path></svg>
+      <div><div class="l-main" data-en="15 projects, clients &amp; own initiatives" data-de="15 Projekte, Kunden &amp;amp; eigene Initiativen">15 Projekte, Kunden &amp; eigene Initiativen</div><div class="l-sub" data-en="across many different industries, as an employee and as a freelancer" data-de="über ganz unterschiedliche Branchen hinweg, als Arbeitnehmer und als Freelancer">über ganz unterschiedliche Branchen hinweg, als Arbeitnehmer und als Freelancer</div></div>
+    </div>
+    <div class="stat">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.6 4 5.7 4 9s-1.5 6.4-4 9c-2.5-2.6-4-5.7-4-9s1.5-6.4 4-9z"></path></svg>
+      <div><div class="l-main" data-en="14 countries with hands-on or client experience" data-de="14 Länder mit Praxis- oder Kundenbezug">14 Länder mit Praxis- oder Kundenbezug</div><div class="l-sub" data-en="Germany, Netherlands, Spain, Belgium, Switzerland, Austria, Luxembourg, France, Italy, Portugal, Mexico, India, USA, UAE" data-de="Deutschland, Niederlande, Spanien, Belgien, Schweiz, Österreich, Luxemburg, Frankreich, Italien, Portugal, Mexiko, Indien, USA, UAE">Deutschland, Niederlande, Spanien, Belgien, Schweiz, Österreich, Luxemburg, Frankreich, Italien, Portugal, Mexiko, Indien, USA, UAE</div></div>
+    </div>
+    <div class="stat">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 2 7l10 5 10-5-10-5z"></path><path d="M6 10v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"></path></svg>
+      <div><div class="l-main" data-en="In Germany since 2015" data-de="Seit 2015 in Deutschland">Seit 2015 in Deutschland</div><div class="l-sub" data-en="from research assistant through a music career to project management" data-de="vom Forschungs-Hiwi über die Musikkarriere bis zur Projektleitung">vom Forschungs-Hiwi über die Musikkarriere bis zur Projektleitung</div></div>
+    </div>
+  </div>
+
+  <div class="skillgrid">
+    <div class="skillcat">
+      <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"></path></svg><span data-en="Electrical Engineering &amp; Hardware" data-de="Elektrotechnik &amp;amp; Hardware">Elektrotechnik &amp; Hardware</span></h3>
+      <div class="chips"><span class="" data-key="Starkstrom / CEE-Verteilung" data-en="High-Voltage / CEE Power Distribution" data-de="Starkstrom / CEE-Verteilung">Starkstrom / CEE-Verteilung</span><span class="" data-key="Elektroinstallation" data-en="Electrical Installation" data-de="Elektroinstallation">Elektroinstallation</span><span class="">Microcontroller / FPGA</span><span class="" data-key="PCB-Löten" data-en="PCB Soldering" data-de="PCB-Löten">PCB-Löten</span><span class="" data-key="PoE-Netzwerktechnik" data-en="PoE Network Technology" data-de="PoE-Netzwerktechnik">PoE-Netzwerktechnik</span></div>
+    </div>
+    <div class="skillcat">
+      <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18 4 12l5-6M15 6l5 6-5 6"></path></svg><span data-en="Software &amp; Development" data-de="Software &amp;amp; Entwicklung">Software &amp; Entwicklung</span></h3>
+      <div class="chips"><span class="">C / C++</span><span class="">Java</span><span class="">OpenCV</span><span class="">Verilog</span><span class="">VHDL</span><span class="">HTML</span><span class="">WLED / Microcontroller-Firmware</span><span class="">Prompt Engineering</span><span class="" data-key="KI-gestützte Code-Tools" data-en="AI-Assisted Coding Tools" data-de="KI-gestützte Code-Tools">KI-gestützte Code-Tools</span><span class="">Matlab</span><span class="">AOSP</span></div>
+    </div>
+    <div class="skillcat">
+      <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18v-5.5a3 3 0 0 1 6 0V18"></path><path d="M4 22h16l-1.5-9h-13z"></path><circle cx="12" cy="6" r="3"></circle></svg><span data-en="Event &amp; Stage Technology" data-de="Veranstaltungs- &amp;amp; Bühnentechnik">Veranstaltungs- &amp; Bühnentechnik</span></h3>
+      <div class="chips"><span class="" data-key="Technische Produktionsleitung" data-en="Technical Production Management" data-de="Technische Produktionsleitung">Technische Produktionsleitung</span><span class="" data-key="Bühnenbau / Truss" data-en="Stage Construction / Truss" data-de="Bühnenbau / Truss">Bühnenbau / Truss</span><span class="">Moving Lights / DMX</span><span class="">Rigging</span><span class="" data-key="Manitou / Hebebühne" data-en="Manitou / Aerial Platform" data-de="Manitou / Hebebühne">Manitou / Hebebühne</span><span class="" data-key="Tontechniker" data-en="Audio Engineer" data-de="Tontechniker">Tontechniker</span></div>
+    </div>
+    <div class="skillcat">
+      <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3"></circle><path d="M2 21c0-3.3 3.1-6 7-6s7 2.7 7 6"></path><circle cx="18" cy="9" r="2.4"></circle><path d="M16.5 21c.2-2.4 2-4.4 4.5-5"></path></svg><span data-en="Project &amp; Team Management" data-de="Projekt- &amp;amp; Teamführung">Projekt- &amp; Teamführung</span></h3>
+      <div class="chips"><span class="" data-key="Internationale Teamleitung" data-en="International Team Leadership" data-de="Internationale Teamleitung">Internationale Teamleitung</span><span class="" data-key="Mehrsprachiger technischer Support" data-en="Multilingual Technical Support" data-de="Mehrsprachiger technischer Support">Mehrsprachiger technischer Support</span><span class="" data-key="Internationale Beschaffung" data-en="International Procurement" data-de="Internationale Beschaffung">Internationale Beschaffung</span><span class="" data-key="Zollabwicklung" data-en="Customs Clearance" data-de="Zollabwicklung">Zollabwicklung</span><span class="" data-key="Technische Dokumentation" data-en="Technical Documentation" data-de="Technische Dokumentation">Technische Dokumentation</span><span class="" data-key="Projektleitung" data-en="Project Management" data-de="Projektleitung">Projektleitung</span></div>
+    </div>
+    <div class="skillcat">
+      <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.6 4 5.7 4 9s-1.5 6.4-4 9c-2.5-2.6-4-5.7-4-9s1.5-6.4 4-9z"></path></svg><span data-en="Languages" data-de="Sprachen">Sprachen</span></h3>
+      <div class="chips"><span class="" data-key="Spanisch, Muttersprache" data-en="Spanish, native" data-de="Spanisch, Muttersprache">Spanisch, Muttersprache</span><span class="" data-key="Englisch, C2" data-en="English, C2" data-de="Englisch, C2">Englisch, C2</span><span data-key="Deutsch, C1" data-en="German, C1" data-de="Deutsch, C1">Deutsch, C1</span><span data-key="Russisch / Hindi, Grundkenntnisse" data-en="Russian / Hindi, basic" data-de="Russisch / Hindi, Grundkenntnisse">Russisch / Hindi, Grundkenntnisse</span></div>
+    </div>
+    <div class="skillcat">
+      <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"></circle><path d="M8.5 12.5 6 21l6-3 6 3-2.5-8.5"></path></svg><span data-en="Licenses &amp; Certificates" data-de="Scheine &amp;amp; Zertifikate">Scheine &amp; Zertifikate</span></h3>
+      <div class="chips"><span data-key="Führerschein B" data-en="Driver's license B" data-de="Führerschein B">Führerschein B</span><span data-key="Staplerschein" data-en="Forklift license" data-de="Staplerschein">Staplerschein</span><span data-key="Hebebühnenschein" data-en="Aerial platform license" data-de="Hebebühnenschein">Hebebühnenschein</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="block" id="projekte">
+    <div class="block-head">
+      <h2 class="section-title" data-en="Projects &amp; Clients" data-de="Projekte &amp;amp; Kunden">Projekte &amp; Kunden</h2>
+      <span class="count-tag" data-en="chronological, newest first" data-de="chronologisch, neueste zuerst">chronologisch, neueste zuerst</span>
+      <button class="edit-toggle" id="editImagesBtn" type="button" data-en="✎ Edit images" data-de="✎ Bilder bearbeiten">✎ Bilder bearbeiten</button>
+    </div>
+    <p class="section-sub" data-en="Sorted by project &amp; client: its own client and its own role per row, even when several ran within the same job or freelance period. Click to expand; images can be clicked to enlarge. The skills up in the header are also clickable and filter this list." data-de="Nach Projekt &amp;amp; Kunde sortiert: eigener Auftraggeber, eigene Rolle pro Zeile, auch wenn mehrere davon in derselben Anstellung oder Freelancer-Phase liefen. Zum Aufklappen anklicken, Bilder lassen sich anklicken und vergrößern. Auch die Skills oben im Kopfbereich sind anklickbar und filtern diese Liste.">Nach Projekt &amp; Kunde sortiert: eigener Auftraggeber, eigene Rolle pro Zeile, auch wenn mehrere davon in derselben Anstellung oder Freelancer-Phase liefen. Zum Aufklappen anklicken, Bilder lassen sich anklicken und vergrößern. Auch die Skills oben im Kopfbereich sind anklickbar und filtern diese Liste.</p>
+    <div class="filter-bar" id="filterBar"><span data-en="Filtered by skill: " data-de="Gefiltert nach Skill: ">Gefiltert nach Skill: </span><b id="filterLabel">WLED / Microcontroller-Firmware</b><span class="clear-filter" id="clearFilter" data-en="✕ Clear filter" data-de="✕ Filter zurücksetzen">✕ Filter zurücksetzen</span></div>
+    <p class="filter-empty" id="filterEmpty"><span data-en="No project explicitly mentions this term in the text. " data-de="Kein Projekt erwähnt diesen Begriff explizit im Text. ">Kein Projekt erwähnt diesen Begriff explizit im Text. </span><span class="clear-filter" id="clearFilter2" data-en="✕ Clear filter" data-de="✕ Filter zurücksetzen">✕ Filter zurücksetzen</span></p>
+
+    <!-- 1. Seilerei -->
+    <details class="proj" data-id="seilerei">
+      <summary>
+        <div class="p-head">
+          <div class="p-titlerow"><span class="p-title">Netzwerk Seilerei</span><span class="p-when">02/2026 – 06/2026</span></div>
+          <div class="p-client" data-en="Frankfurt am Main · freelance" data-de="Frankfurt am Main · freiberuflich">Frankfurt am Main · freiberuflich</div>
+          <div class="p-short" data-en="Technical project management &amp; systems integration for lighting, sound and electrics, including original product development on a WLED base with custom network firmware." data-de="Technische Projektleitung &amp;amp; Systemintegration für Licht, Ton und Elektrik, inklusive eigener Produktentwicklung auf WLED-Basis mit eigener Netzwerk-Firmware.">Technische Projektleitung &amp; Systemintegration für Licht, Ton und Elektrik, inklusive eigener Produktentwicklung auf WLED-Basis mit eigener Netzwerk-Firmware.</div>
+          <div class="p-tags"><span data-en="Technical Project Management" data-de="Technische Projektleitung">Technische Projektleitung</span><span data-en="IoT LED system" data-de="IoT-LED-System">IoT-LED-System</span><span>International Business &amp; Trading</span><span>WLED</span><span data-en="PCB Soldering" data-de="PCB-Löten">PCB-Löten</span><span>Prompt Engineering</span><span data-en="AI-Assisted Coding Tools" data-de="KI-gestützte Code-Tools">KI-gestützte Code-Tools</span><span>HTML</span><span data-en="International Procurement" data-de="Internationale Beschaffung">Internationale Beschaffung</span><span data-en="Customs Clearance" data-de="Zollabwicklung">Zollabwicklung</span><span data-en="High-Voltage / CEE Power Distribution" data-de="Starkstrom / CEE-Verteilung">Starkstrom / CEE-Verteilung</span></div>
+        </div>
+        <div class="chev">＋</div>
+      </summary>
+      <div class="p-body">
+        <div class="p-grid">
+          <div class="p-long">
+            <p data-en="From the first on-site measurement to the finished installation: technical project delivery for lighting, sound and electrics across several halls of the venue. The centrepiece was a fully self-designed, modular LED lighting system, IoT-ready and controllable over WLAN: WLED implemented on hand-soldered boards, combined with partly custom microcontroller firmware for the network connection. Built the enclosure myself, soldered the board myself, from prototype to a finished product running live in operation." data-de="Von der ersten Messung vor Ort bis zur fertigen Installation: technische Projektumsetzung für Licht, Ton und Elektrik über mehrere Hallen der Location. Kernstück war ein komplett selbst konzipiertes, modulares LED-Beleuchtungssystem, IoT-ready und über WLAN steuerbar: Implementierung von WLED auf eigens gelöteten Platinen, kombiniert mit teilweise eigener Firmware auf dem Microcontroller für die Netzwerkanbindung. Eigenes Gehäuse gebaut, eigene Platine gelötet, vom Prototyp bis zum fertigen, im Betrieb laufenden Produkt.">Von der ersten Messung vor Ort bis zur fertigen Installation: technische Projektumsetzung für Licht, Ton und Elektrik über mehrere Hallen der Location. Kernstück war ein komplett selbst konzipiertes, modulares LED-Beleuchtungssystem, IoT-ready und über WLAN steuerbar: Implementierung von WLED auf eigens gelöteten Platinen, kombiniert mit teilweise eigener Firmware auf dem Microcontroller für die Netzwerkanbindung. Eigenes Gehäuse gebaut, eigene Platine gelötet, vom Prototyp bis zum fertigen, im Betrieb laufenden Produkt.</p>
+            <p data-en="The product side was part of it too: international procurement of components including customs clearance, plus programming two custom software frameworks to control and run the system. On top of that, classic electrical work, cable runs and emergency lighting for the venue's ongoing operations. Also helped run the technical side of a seed-market event on site: set up and looked after the sound and light gear for the performing artists." data-de="Neben der technischen Umsetzung gehörte auch die Produktseite dazu: internationale Beschaffung von Bauteilen inklusive Zollabwicklung sowie die Programmierung zweier eigener Software-Frameworks für Steuerung und Betrieb des Systems. Dazu klassische Elektrikarbeit, Kabelverlegung und Notbeleuchtung für den laufenden Spielbetrieb der Location. Auch bei der technischen Organisation eines Saatgutmarkt-Events vor Ort mitgewirkt: Anlage und Technik für die auftretenden Künstler bereitgestellt und betreut.">Neben der technischen Umsetzung gehörte auch die Produktseite dazu: internationale Beschaffung von Bauteilen inklusive Zollabwicklung sowie die Programmierung zweier eigener Software-Frameworks für Steuerung und Betrieb des Systems. Dazu klassische Elektrikarbeit, Kabelverlegung und Notbeleuchtung für den laufenden Spielbetrieb der Location. Auch bei der technischen Organisation eines Saatgutmarkt-Events vor Ort mitgewirkt: Anlage und Technik für die auftretenden Künstler bereitgestellt und betreut.</p>
+            <p data-en="Alongside that, set up and ran the on-site lighting workshop myself. Last working day was at the Tukamina band concert at the venue." data-de="Parallel dazu die Beleuchtungswerkstatt vor Ort selbst eingerichtet und betrieben. Letzter Arbeitstag beim Konzert der Band Tukamina in der Location.">Parallel dazu die Beleuchtungswerkstatt vor Ort selbst eingerichtet und betrieben. Letzter Arbeitstag beim Konzert der Band Tukamina in der Location.</p>
+            <ul data-en="&lt;li&gt;Modular LED lighting system fully self-designed, hand-soldered and coded (WLED + custom firmware)&lt;/li&gt;&lt;li&gt;Built the enclosure and soldered the PCB myself, prototype to finished product&lt;/li&gt;&lt;li&gt;International procurement of components, including customs clearance&lt;/li&gt;&lt;li&gt;Programmed two original software frameworks to control the system&lt;/li&gt;&lt;li&gt;Classic electrical work: cable runs and emergency lighting for live operations&lt;/li&gt;&lt;li&gt;Technical support for a seed-market event on site&lt;/li&gt;" data-de="&lt;li&gt;Modulares LED-Beleuchtungssystem komplett selbst konzipiert, gelötet und programmiert (WLED + eigene Firmware)&lt;/li&gt;&lt;li&gt;Eigenes Gehäuse gebaut und eigene Platine gelötet, vom Prototyp zum fertigen Produkt&lt;/li&gt;&lt;li&gt;Internationale Beschaffung von Bauteilen inklusive Zollabwicklung&lt;/li&gt;&lt;li&gt;Zwei eigene Software-Frameworks zur Steuerung des Systems programmiert&lt;/li&gt;&lt;li&gt;Klassische Elektrikarbeit: Kabelverlegung und Notbeleuchtung für den laufenden Betrieb&lt;/li&gt;&lt;li&gt;Technische Betreuung eines Saatgutmarkt-Events vor Ort&lt;/li&gt;"><li>Modulares LED-Beleuchtungssystem komplett selbst konzipiert, gelötet und programmiert (WLED + eigene Firmware)</li><li>Eigenes Gehäuse gebaut und eigene Platine gelötet, vom Prototyp zum fertigen Produkt</li><li>Internationale Beschaffung von Bauteilen inklusive Zollabwicklung</li><li>Zwei eigene Software-Frameworks zur Steuerung des Systems programmiert</li><li>Klassische Elektrikarbeit: Kabelverlegung und Notbeleuchtung für den laufenden Betrieb</li><li>Technische Betreuung eines Saatgutmarkt-Events vor Ort</li></ul>
+          </div>
+          <div class="p-gallery">
+            
+            
+            <button class="thumb" data-gallery="seilerei" data-index="0"><img loading="lazy" decoding="async" src="images/seilerei-2.jpg" alt="Mobile Beleuchtungswerkstatt in der Seilerei, zweite Ansicht"><span class="zoom-hint">vergrößern</span></button>
+            <figcaption>Die mobile Beleuchtungswerkstatt, von einer anderen Seite.</figcaption>
+            
+          <button class="thumb" data-gallery="seilerei" data-index="1"><img loading="lazy" decoding="async" src="images/seilerei-hero.jpg" alt="Selbst eingerichtete Beleuchtungswerkstatt in der Seilerei, mit eigenem LED-Ambientelicht"><span class="zoom-hint">vergrößern</span></button><figcaption>Selbst eingerichtete Beleuchtungswerkstatt in der Seilerei, mit eigenem LED-Ambientelicht</figcaption></div><div class="p-gallery-extra"></div>
+        </div>
+        <dl class="spec">
+          <dt>Hardware &amp; Tools</dt><dd data-en="Microcontroller (ESP-based), custom PCB, soldering station, WLAN network gear, LED drivers, electrical tools" data-de="Microcontroller (ESP-Basis), eigene Platine, Lötstation, WLAN-Netzwerktechnik, LED-Treiber, Elektrowerkzeug">Microcontroller (ESP-Basis), eigene Platine, Lötstation, WLAN-Netzwerktechnik, LED-Treiber, Elektrowerkzeug</dd>
+          <dt>Software</dt><dd data-en="WLED, partly custom microcontroller firmware (C/C++) for the network connection" data-de="WLED, teilweise eigene Microcontroller-Firmware (C/C++) zur Netzwerkanbindung">WLED, teilweise eigene Microcontroller-Firmware (C/C++) zur Netzwerkanbindung</dd>
+          <dt data-en="Focus Areas" data-de="Themenbereiche">Themenbereiche</dt><dd data-en="Product development, international procurement &amp; customs clearance, IoT system design, event organisation" data-de="Produktentwicklung, internationale Beschaffung &amp;amp; Zollabwicklung, IoT-Systemdesign, Veranstaltungsorganisation">Produktentwicklung, internationale Beschaffung &amp; Zollabwicklung, IoT-Systemdesign, Veranstaltungsorganisation</dd>
+          <dt data-en="Licenses" data-de="Scheine">Scheine</dt><dd><span class="cert" data-en="Forklift license" data-de="Staplerschein">Staplerschein</span><span class="cert" data-en="Aerial platform license" data-de="Hebebühnenschein">Hebebühnenschein</span></dd>
+        </dl>
+      </div>
+    </details>
+
+    <!-- 2. DACHSER -->
+    <details class="proj" data-id="dachser">
+      <summary>
+        <div class="p-head">
+          <div class="p-titlerow"><span class="p-title">DACHSER</span><span class="p-when">11/2025 – 02/2026</span></div>
+          <div class="p-client" data-en="via Vi2Vi Systems · nationwide · freelance" data-de="über Vi2Vi Systems · bundesweit · freiberuflich">über Vi2Vi Systems · bundesweit · freiberuflich</div>
+          <div class="p-short" data-en="Installed a PoE camera system for a massive, automated real-time parcel-tracking setup." data-de="Montage eines PoE-Kamerasystems für ein massives, automatisiertes Realtime-Paketüberwachungssystem.">Montage eines PoE-Kamerasystems für ein massives, automatisiertes Realtime-Paketüberwachungssystem.</div>
+          <div class="p-tags"><span data-en="PoE Network Technology" data-de="PoE-Netzwerktechnik">PoE-Netzwerktechnik</span><span data-en="QR Code Tracking" data-de="QR-Code-Tracking">QR-Code-Tracking</span><span data-en="Video Management" data-de="Video-Management">Video-Management</span><span data-en="Camera Calibration" data-de="Kamerakalibrierung">Kamerakalibrierung</span><span data-en="Project Management" data-de="Projektleitung">Projektleitung</span></div>
+        </div>
+        <div class="chev">＋</div>
+      </summary>
+      <div class="p-body">
+        <div class="p-grid">
+          <div class="p-long">
+            <p data-en="Deployed as a systems integrator in a cooperation between DACHSER, Vi2Vi Systems and the Fraunhofer research institute: on-site deployment of camera and IoT components, administering the video-management software, and contributing to the technical project documentation – exactly the field Vi2Vi describes in its own job postings for this role. Concretely that meant: precise measuring of the warehouse halls, technical assembly of the camera components, mounting a high-resolution, ceiling-mounted camera system (Power over Ethernet) at a height of 7 to 8 metres, plus the server installation." data-de="In Kooperation von DACHSER, Vi2Vi Systems und dem Fraunhofer-Forschungsinstitut als Systemintegrator eingesetzt: Deployment von Kamera- und IoT-Komponenten vor Ort, Administration der Video-Management-Software und Mitarbeit an der technischen Projektdokumentation, genau das Aufgabenfeld, das Vi2Vi in seinen eigenen Stellenausschreibungen für diese Rolle beschreibt. Konkret gehörte dazu: genaue Abmessung der Hallen, technischer Aufbau der Kamerakomponenten, Montage eines hochauflösenden, deckenmontierten Kamerasystems (Power over Ethernet) in 7 bis 8 Metern Höhe sowie die Servermontage.">In Kooperation von DACHSER, Vi2Vi Systems und dem Fraunhofer-Forschungsinstitut als Systemintegrator eingesetzt: Deployment von Kamera- und IoT-Komponenten vor Ort, Administration der Video-Management-Software und Mitarbeit an der technischen Projektdokumentation, genau das Aufgabenfeld, das Vi2Vi in seinen eigenen Stellenausschreibungen für diese Rolle beschreibt. Konkret gehörte dazu: genaue Abmessung der Hallen, technischer Aufbau der Kamerakomponenten, Montage eines hochauflösenden, deckenmontierten Kamerasystems (Power over Ethernet) in 7 bis 8 Metern Höhe sowie die Servermontage.</p>
+            <p data-en="The actual problem behind it: at DACHSER, parcels were previously only tracked locally – nobody could locate a single parcel anywhere in the hall during live operation. The new camera system solves that by scanning every parcel's QR code from above, making it findable across the whole hall. Before installation, the halls were precisely surveyed with a Leica laser measuring device to determine the camera positions; each camera then had to be precisely aligned and calibrated so the codes are reliably captured. After mounting, wired each camera individually, connected it to the correct main server in the server room, and assigned it the correct network address." data-de="Das eigentliche Problem dahinter: Pakete wurden bei DACHSER bisher nur lokal erfasst, niemand konnte ein einzelnes Paket im laufenden Betrieb irgendwo in der Halle orten. Das neue Kamerasystem löst das, indem es die QR-Codes jedes Pakets von oben scannt und so in der gesamten Halle auffindbar macht. Vor der Montage wurden die Hallen mit einem Leica-Lasermessgerät exakt vermessen, um die Kamerapositionen zu bestimmen; jede Kamera musste danach präzise ausgerichtet und kalibriert werden, damit die Codes zuverlässig erfasst werden. Nach der Montage jede Kamera einzeln verkabelt, im Serverraum an den richtigen Hauptserver angeschlossen und der korrekten Netzwerkadresse zugewiesen.">Das eigentliche Problem dahinter: Pakete wurden bei DACHSER bisher nur lokal erfasst, niemand konnte ein einzelnes Paket im laufenden Betrieb irgendwo in der Halle orten. Das neue Kamerasystem löst das, indem es die QR-Codes jedes Pakets von oben scannt und so in der gesamten Halle auffindbar macht. Vor der Montage wurden die Hallen mit einem Leica-Lasermessgerät exakt vermessen, um die Kamerapositionen zu bestimmen; jede Kamera musste danach präzise ausgerichtet und kalibriert werden, damit die Codes zuverlässig erfasst werden. Nach der Montage jede Kamera einzeln verkabelt, im Serverraum an den richtigen Hauptserver angeschlossen und der korrekten Netzwerkadresse zugewiesen.</p>
+            <ul data-en="&lt;li&gt;Precise on-site survey of the halls with a Leica laser measuring device&lt;/li&gt;&lt;li&gt;Mounted the PoE camera system at a height of 7–8 metres, ceiling-mounted&lt;/li&gt;&lt;li&gt;Aligned and calibrated every single camera for reliable QR-code tracking&lt;/li&gt;&lt;li&gt;Wired and connected each camera in the server room, assigned network addresses&lt;/li&gt;&lt;li&gt;Server installation and administration of the video-management software&lt;/li&gt;&lt;li&gt;Contributed to the technical project documentation&lt;/li&gt;" data-de="&lt;li&gt;Genaue Vermessung der Hallen mit Leica-Lasermessgerät vor Ort&lt;/li&gt;&lt;li&gt;Montage des PoE-Kamerasystems in 7–8 Metern Höhe, deckenmontiert&lt;/li&gt;&lt;li&gt;Ausrichtung und Kalibrierung jeder einzelnen Kamera für zuverlässiges QR-Code-Tracking&lt;/li&gt;&lt;li&gt;Verkabelung und Anschluss jeder Kamera im Serverraum, Netzwerkadress-Zuweisung&lt;/li&gt;&lt;li&gt;Servermontage und Administration der Video-Management-Software&lt;/li&gt;&lt;li&gt;Mitarbeit an der technischen Projektdokumentation&lt;/li&gt;"><li>Genaue Vermessung der Hallen mit Leica-Lasermessgerät vor Ort</li><li>Montage des PoE-Kamerasystems in 7–8 Metern Höhe, deckenmontiert</li><li>Ausrichtung und Kalibrierung jeder einzelnen Kamera für zuverlässiges QR-Code-Tracking</li><li>Verkabelung und Anschluss jeder Kamera im Serverraum, Netzwerkadress-Zuweisung</li><li>Servermontage und Administration der Video-Management-Software</li><li>Mitarbeit an der technischen Projektdokumentation</li></ul>
+          </div>
+          <div class="p-gallery">
+            
+            
+            
+            
+          <button class="thumb" data-gallery="dachser" data-index="0"><img loading="lazy" decoding="async" src="images/dachser-2.jpg" alt="Lasermessgerät zur Vermessung der Halle vor der Kameramontage"><span class="zoom-hint">vergrößern</span></button><figcaption>Lasermessgerät zur Vermessung der Halle vor der Kameramontage</figcaption><button class="thumb" data-gallery="dachser" data-index="1"><img loading="lazy" decoding="async" src="images/dachser-4.jpg" alt="Patchpanel im Serverraum, Netzwerkkabel den richtigen Ports zugewiesen"><span class="zoom-hint">vergrößern</span></button><figcaption>Patchpanel im Serverraum, Netzwerkkabel den richtigen Ports zugewiesen</figcaption></div>
+          <div class="p-gallery-extra">
+            
+            
+          <button class="thumb" data-gallery="dachser" data-index="2"><img loading="lazy" decoding="async" src="images/dachser-hero.jpg" alt="Arbeit auf einer Hebebühne hoch über dem Hallenboden bei der Kameramontage für DACHSER"><span class="zoom-hint">vergrößern</span></button><button class="thumb" data-gallery="dachser" data-index="3"><img loading="lazy" decoding="async" src="images/dachser-3.jpg" alt="Kameramontage bei DACHSER, Ansicht von oben"><span class="zoom-hint">vergrößern</span></button><button class="thumb" data-gallery="dachser" data-index="4"><img loading="lazy" decoding="async" src="images/dachser-5.jpg" alt="Leica-Lasermessgerät und Tablet zur Bestimmung der Kamerapositionen in der Halle"><span class="zoom-hint">vergrößern</span></button></div>
+        </div>
+        <dl class="spec">
+          <dt>Hardware &amp; Tools</dt><dd data-en="PoE IP cameras, Leica laser measuring device / total station, aerial work platform, network patch cables, server-rack cabling" data-de="PoE-IP-Kameras, Leica-Lasermessgerät/Totalstation, Hebebühne, Netzwerk-Patchkabel, Serverschrank-Verkabelung">PoE-IP-Kameras, Leica-Lasermessgerät/Totalstation, Hebebühne, Netzwerk-Patchkabel, Serverschrank-Verkabelung</dd>
+          <dt>Software</dt><dd data-en="Video-management software, QR-code-based tracking, network configuration (MAC/IP assignment)" data-de="Video-Management-Software, QR-Code-basiertes Tracking, Netzwerkkonfiguration (MAC-/IP-Zuweisung)">Video-Management-Software, QR-Code-basiertes Tracking, Netzwerkkonfiguration (MAC-/IP-Zuweisung)</dd>
+          <dt data-en="Licenses" data-de="Scheine">Scheine</dt><dd><span class="cert" data-en="Forklift license" data-de="Staplerschein">Staplerschein</span><span class="cert" data-en="Aerial platform license" data-de="Hebebühnenschein">Hebebühnenschein</span></dd>
+        </dl>
+      </div>
+    </details>
+
+    <!-- 3. Sommerwerft -->
+    <details class="proj" data-id="sommerwerft">
+      <summary>
+        <div class="p-head">
+          <div class="p-titlerow"><span class="p-title">Sommerwerft Festival</span><span class="p-when">08/2025</span></div>
+          <div class="p-client" data-en="Antagon TheaterAKTion · Frankfurt am Main · freelance" data-de="Antagon TheaterAKTion · Frankfurt am Main · freiberuflich">Antagon TheaterAKTion · Frankfurt am Main · freiberuflich</div>
+          <div class="p-short" data-en="Technical production management: power supply, lighting and safety for one of Germany's largest open-air theatre festivals." data-de="Technische Produktionsleitung: Stromversorgung, Beleuchtung und Sicherheit für eines der größten Open-Air-Theaterfestivals Deutschlands.">Technische Produktionsleitung: Stromversorgung, Beleuchtung und Sicherheit für eines der größten Open-Air-Theaterfestivals Deutschlands.</div>
+          <div class="p-tags"><span data-en="Technical Production Management" data-de="Technische Produktionsleitung">Technische Produktionsleitung</span><span data-en="High Voltage" data-de="Starkstrom">Starkstrom</span><span data-en="Safety" data-de="Sicherheit">Sicherheit</span><span data-en="Event Technology" data-de="Veranstaltungstechnik">Veranstaltungstechnik</span><span data-en="Project Management" data-de="Projektleitung">Projektleitung</span><span data-en="Audio Engineer" data-de="Tontechniker">Tontechniker</span></div>
+        </div>
+        <div class="chev">＋</div>
+      </summary>
+      <div class="p-body">
+        <div class="p-grid">
+          <div class="p-long">
+            <p data-en="Over 110,000 visitors, around 200 artists and groups, three to four stages on the Main river: Sommerwerft is one of Germany's largest open-air theatre festivals, run by Antagon TheaterAKTion, invoiced through protagon e.V. My crew and I were responsible for planning, building and dismantling the entire power supply for the site (up to 256 A), including heavy machinery, lifting equipment, sanitation facilities, and feeding several concert stages with sound and light. Also hung, automated and rigged lighting with Astera wireless fixtures to legal safety and code requirements." data-de="Über 110.000 Besucher, rund 200 Künstler und Gruppen, drei bis vier Bühnen am Main: die Sommerwerft ist eines der größten Open-Air-Theaterfestivals Deutschlands, veranstaltet von Antagon TheaterAKTion, Rechnungsstellung über protagon e.V. Ich und meine Crew waren verantwortlich für Planung, Aufbau und Abbau der kompletten Stromversorgung des Geländes (bis 256 A), inklusive schwerer Maschinen, Hebeanlagen, Sanitäranlagen und der Speisung mehrerer Konzertbühnen mit Sound und Licht. Zusätzlich Beleuchtung mit Astera-Funksystemen aufgehängt, automatisiert und nach gesetzlichen Sicherheits- und Normvorgaben ausgelegt.">Über 110.000 Besucher, rund 200 Künstler und Gruppen, drei bis vier Bühnen am Main: die Sommerwerft ist eines der größten Open-Air-Theaterfestivals Deutschlands, veranstaltet von Antagon TheaterAKTion, Rechnungsstellung über protagon e.V. Ich und meine Crew waren verantwortlich für Planung, Aufbau und Abbau der kompletten Stromversorgung des Geländes (bis 256 A), inklusive schwerer Maschinen, Hebeanlagen, Sanitäranlagen und der Speisung mehrerer Konzertbühnen mit Sound und Licht. Zusätzlich Beleuchtung mit Astera-Funksystemen aufgehängt, automatisiert und nach gesetzlichen Sicherheits- und Normvorgaben ausgelegt.</p>
+            <p data-en="Public safety was part of the role: whenever safety-critical equipment failed, such as the trash compactor or a lifting rig, I was the one who had to be first on scene, check the cabling and safety, and repair it directly on the equipment if needed." data-de="Öffentliche Sicherheit war Teil der Rolle: bei Störungen an sicherheitskritischen Anlagen, etwa der Müllpresse oder einer Hebeanlage, war ich derjenige, der als Erster vor Ort nachsehen, die Kabel und die Sicherheit prüfen und wenn nötig direkt am Gerät reparieren musste.">Öffentliche Sicherheit war Teil der Rolle: bei Störungen an sicherheitskritischen Anlagen, etwa der Müllpresse oder einer Hebeanlage, war ich derjenige, der als Erster vor Ort nachsehen, die Kabel und die Sicherheit prüfen und wenn nötig direkt am Gerät reparieren musste.</p>
+            <ul data-en="&lt;li&gt;Planned, built and dismantled the site’s entire power supply (up to 256 A)&lt;/li&gt;&lt;li&gt;Power for heavy machinery, lifting equipment and sanitation facilities&lt;/li&gt;&lt;li&gt;Fed several concert stages with sound and light&lt;/li&gt;&lt;li&gt;Hung and automated lighting with Astera wireless fixtures&lt;/li&gt;&lt;li&gt;First point of contact for faults on safety-critical equipment&lt;/li&gt;" data-de="&lt;li&gt;Planung, Auf- und Abbau der kompletten Stromversorgung des Geländes (bis 256 A)&lt;/li&gt;&lt;li&gt;Stromversorgung für schwere Maschinen, Hebeanlagen und Sanitäranlagen&lt;/li&gt;&lt;li&gt;Speisung mehrerer Konzertbühnen mit Sound und Licht&lt;/li&gt;&lt;li&gt;Beleuchtung mit Astera-Funksystemen aufgehängt und automatisiert&lt;/li&gt;&lt;li&gt;Erster Ansprechpartner bei Störungen an sicherheitskritischen Anlagen&lt;/li&gt;"><li>Planung, Auf- und Abbau der kompletten Stromversorgung des Geländes (bis 256 A)</li><li>Stromversorgung für schwere Maschinen, Hebeanlagen und Sanitäranlagen</li><li>Speisung mehrerer Konzertbühnen mit Sound und Licht</li><li>Beleuchtung mit Astera-Funksystemen aufgehängt und automatisiert</li><li>Erster Ansprechpartner bei Störungen an sicherheitskritischen Anlagen</li></ul>
+          </div>
+          <div class="p-gallery">
+            
+            
+            
+            
+          <button class="thumb" data-gallery="sommerwerft" data-index="0"><img loading="lazy" decoding="async" src="images/sommerwerft-6.jpg" alt="Sommerwerft-Festivalgelände nachts mit Beleuchtung und Frankfurter Skyline"><span class="zoom-hint">vergrößern</span></button><figcaption>Sommerwerft-Festivalgelände nachts mit Beleuchtung und Frankfurter Skyline</figcaption><button class="thumb" data-gallery="sommerwerft" data-index="1"><img loading="lazy" decoding="async" src="images/sommerwerft-5.jpg" alt="Luftbild des Festivalgeländes von der Westseite mit Hauptbühne"><span class="zoom-hint">vergrößern</span></button><figcaption>Luftbild des Festivalgeländes von der Westseite mit Hauptbühne</figcaption></div>
+          <div class="p-gallery-extra">
+            
+            
+            
+          <button class="thumb" data-gallery="sommerwerft" data-index="2"><img loading="lazy" decoding="async" src="images/sommerwerft-hero.jpg" alt="Geöffneter Stromverteilerschrank mit zahlreichen CEE-Steckern für die Stromversorgung des Sommerwerft-Festivals"><span class="zoom-hint">vergrößern</span></button><button class="thumb" data-gallery="sommerwerft" data-index="3"><img loading="lazy" decoding="async" src="images/sommerwerft-3.jpg" alt="Turm mit Ton- und Notbeleuchtungsanlage auf dem Sommerwerft-Gelände"><span class="zoom-hint">vergrößern</span></button><button class="thumb" data-gallery="sommerwerft" data-index="4"><img loading="lazy" decoding="async" src="images/sommerwerft-4.jpg" alt="Weitere Ansicht vom Sommerwerft-Gelände"><span class="zoom-hint">vergrößern</span></button><button class="thumb" data-gallery="sommerwerft" data-index="5"><img loading="lazy" decoding="async" src="images/sommerwerft-7.jpg" alt="Bühne und Sommerwerft-Banner auf dem Festivalgelände vor der Frankfurter Skyline"><span class="zoom-hint">vergrößern</span></button><button class="thumb" data-gallery="sommerwerft" data-index="6"><img loading="lazy" decoding="async" src="images/sommerwerft-8.jpg" alt="Beleuchtung und Kabel von einer Traverse aus verkabeln, Blick von oben auf den Platz"><span class="zoom-hint">vergrößern</span></button></div>
+        </div>
+        <dl class="spec">
+          <dt>Hardware &amp; Tools</dt><dd data-en="CEE power distribution (up to 256 A), Astera wireless lighting, lifting equipment, emergency &amp; safety systems" data-de="CEE-Stromverteiler (bis 256 A), Astera-Funklicht, Hebeanlagen, Not- und Sicherheitstechnik">CEE-Stromverteiler (bis 256 A), Astera-Funklicht, Hebeanlagen, Not- und Sicherheitstechnik</dd>
+          <dt data-en="Focus Areas" data-de="Themenbereiche">Themenbereiche</dt><dd data-en="High-voltage distribution, event safety, lighting automation" data-de="Starkstromverteilung, Veranstaltungssicherheit, Automatisierung von Beleuchtung">Starkstromverteilung, Veranstaltungssicherheit, Automatisierung von Beleuchtung</dd>
+        </dl>
+      </div>
+    </details>
+
+    <!-- 4. Maratone -->
+    <details class="proj" data-id="maratone">
+      <summary>
+        <div class="p-head">
+          <div class="p-titlerow"><span class="p-title">Maratone Event-Technik</span><span class="p-when">seit 04/2025</span></div>
+          <div class="p-client" data-en="City &amp; music festivals and trade fairs, incl. Schlachthof venues &amp; theatres · freelance" data-de="Stadt-, Musikfestivals &amp;amp; Messen, u.a. Schlachthof-Venues &amp;amp; Theater · freiberuflich">Stadt-, Musikfestivals &amp; Messen, u.a. Schlachthof-Venues &amp; Theater · freiberuflich</div>
+          <div class="p-short" data-en="Long-standing stage-construction partner, also working as a lighting and sound technician." data-de="Langjähriger Bühnenbau-Partner, auch als Licht- und Soundtechniker im Einsatz.">Langjähriger Bühnenbau-Partner, auch als Licht- und Soundtechniker im Einsatz.</div>
+          <div class="p-tags"><span data-en="Stage Construction" data-de="Bühnenbau">Bühnenbau</span><span data-en="Truss Systems" data-de="Truss-Systeme">Truss-Systeme</span><span data-en="Lighting &amp; Sound Technology" data-de="Licht- &amp;amp; Soundtechnik">Licht- &amp; Soundtechnik</span><span>Midas M32</span><span>Moving Lights / DMX</span><span>Rigging</span><span data-en="Audio Engineer" data-de="Tontechniker">Tontechniker</span></div>
+        </div>
+        <div class="chev">＋</div>
+      </summary>
+      <div class="p-body">
+        <div class="p-grid">
+          <div class="p-long">
+            <p data-en="Recurring collaboration with Maratone Event-Technik (Eikmar Wadewitz, &lt;a href=&quot;https://www.maratone.de/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;maratone.de&lt;/a&gt;): building modular stages with roof structures, trussing and lighting rigs, including for a festival in Lorch. Beyond pure stage assembly, involved in these builds for years, at times with a complete sound system for large festivals, and also working as a lighting and sound technician myself, including on Midas M32 consoles." data-de="Wiederkehrende Zusammenarbeit mit Maratone Event-Technik (Eikmar Wadewitz, &lt;a href=&quot;https://www.maratone.de/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;maratone.de&lt;/a&gt;): Aufbau modularer Bühnen mit Dachkonstruktion, Traversen und Lichttechnik, unter anderem für ein Festival in Lorch. Über die reine Bühnenmontage hinaus schon jahrelang bei diesen Aufbauten dabei, teils mit komplettem Soundsystem für große Festivals, und dabei auch selbst als Licht- und Soundtechniker im Einsatz, unter anderem an Midas-M32-Mischpulten.">Wiederkehrende Zusammenarbeit mit Maratone Event-Technik (Eikmar Wadewitz, <a href="https://www.maratone.de/" target="_blank" rel="noopener">maratone.de</a>): Aufbau modularer Bühnen mit Dachkonstruktion, Traversen und Lichttechnik, unter anderem für ein Festival in Lorch. Über die reine Bühnenmontage hinaus schon jahrelang bei diesen Aufbauten dabei, teils mit komplettem Soundsystem für große Festivals, und dabei auch selbst als Licht- und Soundtechniker im Einsatz, unter anderem an Midas-M32-Mischpulten.</p>
+          </div>
+          <div class="p-gallery">
+            
+            
+            
+            
+          <button class="thumb" data-gallery="maratone" data-index="0"><img loading="lazy" decoding="async" src="images/maratone-4.jpg" alt="Trommelband vor der selbst aufgebauten Bühne mit Maratone Event-Technik"><span class="zoom-hint">vergrößern</span></button><figcaption>Trommelband vor der selbst aufgebauten Bühne mit Maratone Event-Technik</figcaption></div>
+          <div class="p-gallery-extra">
+            
+          <button class="thumb" data-gallery="maratone" data-index="1"><img loading="lazy" decoding="async" src="images/maratone-3.jpg" alt="Bühnen-, Sound- und Lichtaufbau mit Maratone Event-Technik"><span class="zoom-hint">vergrößern</span></button><button class="thumb" data-gallery="maratone" data-index="2"><img loading="lazy" decoding="async" src="images/maratone-hero.jpg" alt="Selbst aufgebaute modulare Konzertbühne mit Traversendach und Sound-Truck"><span class="zoom-hint">vergrößern</span></button></div>
+        </div>
+        <dl class="spec">
+          <dt>Hardware &amp; Tools</dt><dd data-en="Aluminium truss systems, Bütec and Nüssli stage podiums, tent/roof structures, Midas M32 digital mixing console, PA systems, moving-light fixtures" data-de="Aluminium-Traversensysteme, Bütec- und Nüssli-Bühnenpodeste, Zelt-/Dachaufbauten, Midas-M32-Digitalmischpult, PA-Systeme, Moving-Light-Scheinwerfer">Aluminium-Traversensysteme, Bütec- und Nüssli-Bühnenpodeste, Zelt-/Dachaufbauten, Midas-M32-Digitalmischpult, PA-Systeme, Moving-Light-Scheinwerfer</dd>
+          <dt data-en="Licenses" data-de="Scheine">Scheine</dt><dd><span class="cert" data-en="Forklift license" data-de="Staplerschein">Staplerschein</span></dd>
+        </dl>
+      </div>
+    </details>
+
+    <!-- 5. Staatstheater / Theater generisch -->
+    <details class="proj" data-id="theater">
+      <summary>
+        <div class="p-head">
+          <div class="p-titlerow"><span class="p-title">Theater, Konzerthäuser &amp; Festivals</span><span class="p-when">seit 03/2025</span></div>
+          <div class="p-client" data-en="State theatres, concert halls &amp; festivals, incl. Staatstheater Wiesbaden, Schlachthof Wiesbaden, Nibelungenfestspiele Worms · freelance" data-de="Staatstheater, Konzerthäuser &amp;amp; Festivals, u.a. Staatstheater Wiesbaden, Schlachthof Wiesbaden, Nibelungenfestspiele Worms · freiberuflich">Staatstheater, Konzerthäuser &amp; Festivals, u.a. Staatstheater Wiesbaden, Schlachthof Wiesbaden, Nibelungenfestspiele Worms · freiberuflich</div>
+          <div class="p-short" data-en="Short-notice project work in lighting, stage technology, and set/scenery construction, including during live performances." data-de="Kurzfristige Projekteinsätze in Beleuchtung, Bühnentechnik sowie Bühnen- und Kulissenbau, auch während laufender Vorstellungen.">Kurzfristige Projekteinsätze in Beleuchtung, Bühnentechnik sowie Bühnen- und Kulissenbau, auch während laufender Vorstellungen.</div>
+          <div class="p-tags"><span>Moving Lights</span><span data-en="Scenery/Set Construction" data-de="Kulissenbau">Kulissenbau</span><span data-en="Fast Scene Changes" data-de="Schnelle Umbauten">Schnelle Umbauten</span><span>Nibelungenfestspiele</span><span data-en="Stage Construction / Truss" data-de="Bühnenbau / Truss">Bühnenbau / Truss</span><span>Rigging</span><span data-en="Manitou / Aerial Platform" data-de="Manitou / Hebebühne">Manitou / Hebebühne</span><span data-en="PCB Soldering" data-de="PCB-Löten">PCB-Löten</span><span data-en="Audio Engineer" data-de="Tontechniker">Tontechniker</span></div>
+        </div>
+        <div class="chev">＋</div>
+      </summary>
+      <div class="p-body">
+        <div class="p-grid">
+          <div class="p-long">
+            <p data-en="Short-notice project work in lighting and stage technology, from lighting design for premieres to scenery construction under time pressure, every job with its own schedule, crew and requirements. At Staatstheater Wiesbaden that included: assembling set and lighting elements to the stage plan for various productions and rehearsals and setting them up in the right position, repairing moving lights, safety-testing sockets and lamps, and categorising lighting filters." data-de="Kurzfristige Projekteinsätze in Beleuchtung und Bühnentechnik, von der Lichtplanung für Premieren bis zum Kulissenbau unter Zeitdruck, jeder Einsatz mit eigenem Zeitplan, eigener Crew und eigenen Anforderungen. Am Staatstheater Wiesbaden gehörte dazu: Kulissen- und Beleuchtungselemente nach Bühnenplan für verschiedene Inszenierungen und Proben zusammenbauen und an der richtigen Position einrichten, Reparatur von Moving Lights, Sicherheitsprüfung von Steckdosen und Lampen sowie Kategorisierung der Beleuchtungsfilter.">Kurzfristige Projekteinsätze in Beleuchtung und Bühnentechnik, von der Lichtplanung für Premieren bis zum Kulissenbau unter Zeitdruck, jeder Einsatz mit eigenem Zeitplan, eigener Crew und eigenen Anforderungen. Am Staatstheater Wiesbaden gehörte dazu: Kulissen- und Beleuchtungselemente nach Bühnenplan für verschiedene Inszenierungen und Proben zusammenbauen und an der richtigen Position einrichten, Reparatur von Moving Lights, Sicherheitsprüfung von Steckdosen und Lampen sowie Kategorisierung der Beleuchtungsfilter.</p>
+            <p data-en="During live performances, also responsible for fast scene changes: moving heavy motors and rigging systems as well as moveable elements such as large lighting trusses travelling sideways across the stage, all during live operation and under time pressure. Also worked on stage and set build/strike for the Nibelungenfestspiele Worms. Staatstheater Wiesbaden, the Schlachthof Wiesbaden and the Nibelungenfestspiele are long-standing, recurring partners, much like the collaboration with Maratone Event-Technik." data-de="Während laufender Vorstellungen zusätzlich für schnelle Umbauten zuständig: das Bewegen schwerer Motoren und Hängesysteme sowie beweglicher Elemente wie großer, seitlich über die Bühne fahrender Lichttrassen, alles im laufenden Betrieb und unter Zeitdruck. Zusätzlich beim Bühnen- und Kulissenauf-/-abbau für die Nibelungenfestspiele Worms im Einsatz. Staatstheater Wiesbaden, der Schlachthof Wiesbaden und die Nibelungenfestspiele sind dabei langjährige, wiederkehrende Kooperationspartner, ähnlich wie die Zusammenarbeit mit Maratone Event-Technik.">Während laufender Vorstellungen zusätzlich für schnelle Umbauten zuständig: das Bewegen schwerer Motoren und Hängesysteme sowie beweglicher Elemente wie großer, seitlich über die Bühne fahrender Lichttrassen, alles im laufenden Betrieb und unter Zeitdruck. Zusätzlich beim Bühnen- und Kulissenauf-/-abbau für die Nibelungenfestspiele Worms im Einsatz. Staatstheater Wiesbaden, der Schlachthof Wiesbaden und die Nibelungenfestspiele sind dabei langjährige, wiederkehrende Kooperationspartner, ähnlich wie die Zusammenarbeit mit Maratone Event-Technik.</p>
+          </div>
+          <div class="p-gallery">
+            <button class="thumb" data-gallery="theater" data-index="0"><img loading="lazy" decoding="async" src="images/theater-hero.jpg" alt="Reparatur eines Moving-Light-Scheinwerfers am Staatstheater Wiesbaden"><span class="zoom-hint">vergrößern</span></button>
+            <figcaption>Moving-Light-Reparatur am Staatstheater Wiesbaden.</figcaption>
+            
+            
+          </div>
+          <div class="p-gallery-extra">
+            
+          <button class="thumb" data-gallery="theater" data-index="1"><img loading="lazy" decoding="async" src="images/theater-3.jpg" alt="Weitere Beleuchtungsfilter-Kategorisierung am Staatstheater Wiesbaden"><span class="zoom-hint">vergrößern</span></button><button class="thumb" data-gallery="theater" data-index="2"><img loading="lazy" decoding="async" src="images/theater-2.jpg" alt="Kategorisierung von Beleuchtungsfiltern am Staatstheater Wiesbaden"><span class="zoom-hint">vergrößern</span></button><button class="thumb" data-gallery="theater" data-index="3"><img loading="lazy" decoding="async" src="images/music-6.jpg" alt="Discokugeln im Tanzhaus West für eine eigene Veranstaltung, Kabinett der Kuriositäten"><span class="zoom-hint">vergrößern</span></button></div>
+        </div>
+        <dl class="spec">
+          <dt>Hardware &amp; Tools</dt><dd data-en="Moving-light fixtures, DMX control, socket/electrical test equipment, lighting filters, scenery-building tools, rigging systems" data-de="Moving-Light-Scheinwerfer, DMX-Steuerung, Prüfgeräte für Steckdosen/Elektrik, Beleuchtungsfilter, Kulissenbau-Werkzeug, Hängesysteme">Moving-Light-Scheinwerfer, DMX-Steuerung, Prüfgeräte für Steckdosen/Elektrik, Beleuchtungsfilter, Kulissenbau-Werkzeug, Hängesysteme</dd>
+          <dt data-en="Licenses" data-de="Scheine">Scheine</dt><dd><span class="cert" data-en="Forklift license" data-de="Staplerschein">Staplerschein</span></dd>
+        </dl>
+      </div>
+    </details>
+
+    <!-- 6. Elektro Wilhelm -->
+    <details class="proj" data-id="wilhelm">
+      <summary>
+        <div class="p-head">
+          <div class="p-titlerow"><span class="p-title">Elektro Wilhelm</span><span class="p-when">07/2025</span></div>
+          <div class="p-client" data-en="Rhine-Main region · fixed-term employment" data-de="Rhein-Main-Region · befristete Anstellung">Rhein-Main-Region · befristete Anstellung</div>
+          <div class="p-short" data-en="Modernised residential service-line electrics on behalf of the municipal utility: rebuilt the power feed to code." data-de="Modernisierung der Hausanschluss-Elektrik im Auftrag der Stadtwerke: Stromspeisung normgerecht neu aufgebaut.">Modernisierung der Hausanschluss-Elektrik im Auftrag der Stadtwerke: Stromspeisung normgerecht neu aufgebaut.</div>
+          <div class="p-tags"><span data-en="Meter-Cabinet Refurbishment" data-de="Zählerschrank-Sanierung">Zählerschrank-Sanierung</span><span data-en="Electrical Installation" data-de="Elektroinstallation">Elektroinstallation</span><span data-en="Equipotential Bonding" data-de="Potenzialausgleich">Potenzialausgleich</span><span data-en="VDE Standards" data-de="VDE-Normen">VDE-Normen</span></div>
+        </div>
+        <div class="chev">＋</div>
+      </summary>
+      <div class="p-body">
+        <div class="p-grid">
+          <div class="p-long">
+            <p data-en="Deployed for &lt;a href=&quot;https://elektrowilhelm.de/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Elektro Wilhelm&lt;/a&gt; on behalf of the local municipal utility in the Rhine-Main area: modernised the residential service-line electrics in a neighbourhood whose power feed still ran, outdated, through the attic instead of the standard sub-distribution board. Concretely that meant the proper installation of new electrical cabinets including the house power feed: professionally removed old equipment and outdated distribution boxes, installed new meter cabinets, and rewired and reconnected all fuses to current code. Alongside that, classic electrician's work such as cable runs in residential buildings, plus carrying out code-compliant equipotential bonding including the associated resistance measurement." data-de="Einsatz für &lt;a href=&quot;https://elektrowilhelm.de/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Elektro Wilhelm&lt;/a&gt; im Auftrag der örtlichen Stadtwerke im Rhein-Main-Gebiet: Modernisierung der Hausanschluss-Elektrik in einem Wohngebiet, dessen Stromspeisung bislang noch veraltet über den Dachboden statt über die reguläre Unterverteilung lief. Konkret gehörte dazu die fachgerechte Installation neuer Elektrokästen samt Hausstromspeisung: altes Equipment und veraltete Verteilerkästen fachgerecht demontiert, neue Zählerschränke installiert und sämtliche Sicherungen normgerecht neu verlegt und angeschlossen. Dazu klassische Elektriker-Arbeiten wie Kabelverlegung im Wohnbau sowie Durchführung des Potenzialausgleichs nach Norm samt der dazugehörigen Widerstandsmessung.">Einsatz für <a href="https://elektrowilhelm.de/" target="_blank" rel="noopener">Elektro Wilhelm</a> im Auftrag der örtlichen Stadtwerke im Rhein-Main-Gebiet: Modernisierung der Hausanschluss-Elektrik in einem Wohngebiet, dessen Stromspeisung bislang noch veraltet über den Dachboden statt über die reguläre Unterverteilung lief. Konkret gehörte dazu die fachgerechte Installation neuer Elektrokästen samt Hausstromspeisung: altes Equipment und veraltete Verteilerkästen fachgerecht demontiert, neue Zählerschränke installiert und sämtliche Sicherungen normgerecht neu verlegt und angeschlossen. Dazu klassische Elektriker-Arbeiten wie Kabelverlegung im Wohnbau sowie Durchführung des Potenzialausgleichs nach Norm samt der dazugehörigen Widerstandsmessung.</p>
+          </div>
+          <div class="p-gallery">
+            
+            
+            
+            
+          <button class="thumb" data-gallery="wilhelm" data-index="0"><img loading="lazy" decoding="async" src="images/wilhelm-3.jpg" alt="Bohrarbeiten an der Decke für den Potenzialausgleich"><span class="zoom-hint">vergrößern</span></button><figcaption>Bohrarbeiten an der Decke für den Potenzialausgleich</figcaption></div>
+          <div class="p-gallery-extra">
+            <button class="thumb" data-gallery="wilhelm" data-index="1"><img loading="lazy" decoding="async" src="images/wilhelm-2.jpg" alt="Einbau von Elektrokabeln bei der Sanierung eines Hausanschlusses"><span class="zoom-hint">vergrößern</span></button>
+          <button class="thumb" data-gallery="wilhelm" data-index="2"><img loading="lazy" decoding="async" src="images/project-elektro.jpg" alt="Elektro-Infrastruktur und Schaltschränke, wie bei Elektro Wilhelm installiert"><span class="zoom-hint">vergrößern</span></button></div>
+        </div>
+        <dl class="spec">
+          <dt data-en="Focus Areas" data-de="Themenbereiche">Themenbereiche</dt><dd data-en="Cable installation, equipotential bonding, resistance measurement, VDE standards, adjacent network-technology work" data-de="Kabelverlegung, Potenzialausgleich, Widerstandsmessung, VDE-Normen, Netzwerktechnik-Umfeld">Kabelverlegung, Potenzialausgleich, Widerstandsmessung, VDE-Normen, Netzwerktechnik-Umfeld</dd>
+        </dl>
+      </div>
+    </details>
+
+    <!-- 7. Internationale Festivals -->
+    <details class="proj" data-id="denhaag">
+      <summary>
+        <div class="p-head">
+          <div class="p-titlerow"><span class="p-title">Latino &amp; Reggae Festival + Tomorrowland</span><span class="p-when">06/2026</span></div>
+          <div class="p-client" data-en="Tourism Events Breda &amp; Hands4Events · The Hague (NL) &amp; Belgium" data-de="Tourism Events Breda &amp;amp; Hands4Events · Den Haag (NL) &amp;amp; Belgien">Tourism Events Breda &amp; Hands4Events · Den Haag (NL) &amp; Belgien</div>
+          <div class="p-short" data-en="Building and striking major international festivals in the Netherlands and Belgium, incl. Tomorrowland, as a Manitou/aerial-platform operator." data-de="Auf- und Abbau internationaler Großfestivals in den Niederlanden und Belgien, u.a. Tomorrowland, als Manitou-/Hebebühnenfahrer.">Auf- und Abbau internationaler Großfestivals in den Niederlanden und Belgien, u.a. Tomorrowland, als Manitou-/Hebebühnenfahrer.</div>
+          <div class="p-tags"><span data-en="Manitou Operator" data-de="Manitou-Fahrer">Manitou-Fahrer</span><span data-en="Aerial Platform" data-de="Hebebühne">Hebebühne</span><span data-en="Festival Logistics" data-de="Festivallogistik">Festivallogistik</span><span>Tomorrowland</span></div>
+        </div>
+        <div class="chev">＋</div>
+      </summary>
+      <div class="p-body">
+        <div class="p-grid">
+          <div class="p-long">
+            <p data-en="International deployments for Tourism Events Breda together with Hands4Events at the Latino &amp; Reggae Festival in The Hague and at Tomorrowland in Belgium, one of the largest electronic-music festivals in the world. As a Manitou/aerial-platform operator, responsible for the logistical core of the build: transporting and positioning heavy components so fencing, barrier sets, cable bridges, stages and tents get into place quickly. Also involved in planning the build process." data-de="Internationale Einsätze für Tourism Events Breda gemeinsam mit Hands4Events beim Latino &amp;amp; Reggae Festival in Den Haag sowie bei Tomorrowland in Belgien, einem der größten Elektronik-Festivals der Welt. Als Manitou-/Hebebühnenfahrer für den logistischen Kern des Aufbaus zuständig: Transport und Positionierung schwerer Bauteile, damit Zäune, Garnituren, Kabelbrücken, Bühnen und Zelte zügig an ihren Platz kommen. Zusätzlich an der Planung des Aufbauprozesses beteiligt.">Internationale Einsätze für Tourism Events Breda gemeinsam mit Hands4Events beim Latino &amp; Reggae Festival in Den Haag sowie bei Tomorrowland in Belgien, einem der größten Elektronik-Festivals der Welt. Als Manitou-/Hebebühnenfahrer für den logistischen Kern des Aufbaus zuständig: Transport und Positionierung schwerer Bauteile, damit Zäune, Garnituren, Kabelbrücken, Bühnen und Zelte zügig an ihren Platz kommen. Zusätzlich an der Planung des Aufbauprozesses beteiligt.</p>
+          </div>
+          <div class="p-gallery">
+            
+            
+            <button class="thumb" data-gallery="denhaag" data-index="0"><img loading="lazy" decoding="async" src="images/denhaag-2.jpg" alt="Weitere Ansicht vom Festivalaufbau in Den Haag"><span class="zoom-hint">vergrößern</span></button>
+          </div><div class="p-gallery-extra"><button class="thumb" data-gallery="denhaag" data-index="1"><img loading="lazy" decoding="async" src="images/denhaag-hero.jpg" alt="Aufbau des Festivalgeländes in Den Haag mit Manitou-Teleskoplader"><span class="zoom-hint">vergrößern</span></button></div>
+        </div>
+        <dl class="spec">
+          <dt>Hardware &amp; Tools</dt><dd data-en="Manitou telehandler, aerial work platform, fencing/stage systems, cable bridges" data-de="Manitou-Teleskoplader, Hebebühne, Zaun-/Bühnensysteme, Kabelbrücken">Manitou-Teleskoplader, Hebebühne, Zaun-/Bühnensysteme, Kabelbrücken</dd>
+          <dt data-en="Licenses" data-de="Scheine">Scheine</dt><dd><span class="cert" data-en="Forklift license" data-de="Staplerschein">Staplerschein</span><span class="cert" data-en="Aerial platform license" data-de="Hebebühnenschein">Hebebühnenschein</span></dd>
+        </dl>
+      </div>
+    </details>
+
+    <!-- 8. Volkswagen -->
+    <details class="proj" data-id="vw">
+      <summary>
+        <div class="p-head">
+          <div class="p-titlerow"><span class="p-title">Volkswagen</span><span class="p-when">01/2023 – 04/2025</span></div>
+          <div class="p-client" data-en="Majorel Berlin GmbH (part of Teleperformance) · Europe-wide · permanent employment" data-de="Majorel Berlin GmbH (Teil von Teleperformance) · europaweit · Festanstellung">Majorel Berlin GmbH (Teil von Teleperformance) · europaweit · Festanstellung</div>
+          <div class="p-short" data-en="E-mobility specialist: multilingual technical support for VW Flexpole fast-charging stations with a combined system output of 250 kW." data-de="E-Mobilitätsspezialist: mehrsprachiger technischer Support für VW-Flexpole-Schnellladesäulen mit einer kombinierten Systemleistung von 250 kW.">E-Mobilitätsspezialist: mehrsprachiger technischer Support für VW-Flexpole-Schnellladesäulen mit einer kombinierten Systemleistung von 250 kW.</div>
+          <div class="p-tags"><span>Elli Flexpole</span><span data-en="DTC Fault Diagnosis" data-de="DTC-Fehlerdiagnose">DTC-Fehlerdiagnose</span><span data-en="High-Voltage Technology" data-de="Hochvolt-Technik">Hochvolt-Technik</span><span>BMS</span><span data-en="Multilingual Support" data-de="Mehrsprachiger Support">Mehrsprachiger Support</span><span data-en="Technical Documentation" data-de="Technische Dokumentation">Technische Dokumentation</span><span data-en="PCB Soldering" data-de="PCB-Löten">PCB-Löten</span><span>C / C++</span></div>
+        </div>
+        <div class="chev">＋</div>
+      </summary>
+      <div class="p-body">
+        <div class="p-grid">
+          <div class="p-long">
+            <p data-en="For two years, as an e-mobility specialist, provided phone and written support for dealers and workshops on VW Flexpole fast-charging stations with a combined system output of 250 kW (brand &lt;a href=&quot;https://elli.eco/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Elli&lt;/a&gt;, Volkswagen's e-mobility subsidiary) across Europe, with a focus on the Netherlands, Spain, Austria and Germany. From initial commissioning to ongoing troubleshooting, mediating multilingually between on-site technicians and internal systems. Specifically that included:" data-de="Zwei Jahre lang als E-Mobilitätsspezialist telefonischer und schriftlicher Support für Vertragshändler und Werkstätten zu VW-Flexpole-Schnellladesäulen mit einer kombinierten Systemleistung von 250 kW (Marke &lt;a href=&quot;https://elli.eco/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Elli&lt;/a&gt;, die E-Mobility-Tochter von Volkswagen) europaweit, mit Schwerpunkt Niederlande, Spanien, Österreich und Deutschland. Von der Erstinbetriebnahme bis zur laufenden Störungsbehebung, mehrsprachig zwischen Technikern vor Ort und internen Systemen vermittelt. Konkret gehörte dazu:">Zwei Jahre lang als E-Mobilitätsspezialist telefonischer und schriftlicher Support für Vertragshändler und Werkstätten zu VW-Flexpole-Schnellladesäulen mit einer kombinierten Systemleistung von 250 kW (Marke <a href="https://elli.eco/" target="_blank" rel="noopener">Elli</a>, die E-Mobility-Tochter von Volkswagen) europaweit, mit Schwerpunkt Niederlande, Spanien, Österreich und Deutschland. Von der Erstinbetriebnahme bis zur laufenden Störungsbehebung, mehrsprachig zwischen Technikern vor Ort und internen Systemen vermittelt. Konkret gehörte dazu:</p>
+            <ul data-en="&lt;li&gt;Analysed JSON/field data with DTC fault codes, identified root cause and fault sequence, wrote reports&lt;/li&gt;&lt;li&gt;Where no backend solution was possible: delivered concrete improvement suggestions, some of which fed directly into the repair manuals&lt;/li&gt;&lt;li&gt;Contributed to the rollout of add-on hardware such as payment and screen terminals&lt;/li&gt;&lt;li&gt;On-site deployments to support initial commissioning, plus training sessions in Wolfsburg&lt;/li&gt;&lt;li&gt;Proper replacement of high-performance batteries and battery management systems (BMS), high-voltage work with the corresponding safety requirements&lt;/li&gt;" data-de="
+              &lt;li&gt;JSON-/Felddaten mit DTC-Fehlercodes auswerten, Fehlerursache und -reihenfolge identifizieren, Berichte schreiben&lt;/li&gt;
+              &lt;li&gt;Wenn über das Backend keine Lösung möglich war: konkrete Verbesserungsvorschläge liefern, teils direkt in die Reparatur-Handbücher eingeflossen&lt;/li&gt;
+              &lt;li&gt;Mitwirkung an der Implementierung von Zusatzgeräten wie Bezahl- und Bildschirmterminals&lt;/li&gt;
+              &lt;li&gt;Vor-Ort-Einsätze zur Unterstützung bei Erstinbetriebnahmen sowie Schulungen in Wolfsburg&lt;/li&gt;
+              &lt;li&gt;Fachgerechter Austausch von Hochleistungsakkus und Batteriemanagementsystemen (BMS), Hochvolt-Arbeit mit entsprechendem Sicherheitsanspruch&lt;/li&gt;
+            ">
+              <li>JSON-/Felddaten mit DTC-Fehlercodes auswerten, Fehlerursache und -reihenfolge identifizieren, Berichte schreiben</li>
+              <li>Wenn über das Backend keine Lösung möglich war: konkrete Verbesserungsvorschläge liefern, teils direkt in die Reparatur-Handbücher eingeflossen</li>
+              <li>Mitwirkung an der Implementierung von Zusatzgeräten wie Bezahl- und Bildschirmterminals</li>
+              <li>Vor-Ort-Einsätze zur Unterstützung bei Erstinbetriebnahmen sowie Schulungen in Wolfsburg</li>
+              <li>Fachgerechter Austausch von Hochleistungsakkus und Batteriemanagementsystemen (BMS), Hochvolt-Arbeit mit entsprechendem Sicherheitsanspruch</li>
+            </ul>
+          </div>
+          <div class="p-gallery">
+            <button class="thumb" data-gallery="vw" data-index="0"><img loading="lazy" decoding="async" src="images/vw-hero.jpg" alt="Elli Flexpole Schnellladesäule an einem VW-Fahrzeug"><span class="zoom-hint">vergrößern</span></button>
+            <figcaption>Elli-Flexpole-Schnellladesäule, wie im Support-Alltag behandelt.</figcaption>
+          </div>
+          <div class="p-gallery-extra">
+            <button class="thumb" data-gallery="vw" data-index="1"><img loading="lazy" decoding="async" src="images/vw-2.jpg" alt="VW-Elektrofahrzeug beim Laden an einer Schnellladesäule"><span class="zoom-hint">vergrößern</span></button>
+          </div>
+        </div>
+        <dl class="spec">
+          <dt data-en="Focus Areas" data-de="Themenbereiche">Themenbereiche</dt><dd data-en="E-mobility, high-voltage/BMS technology, DTC fault diagnosis, remote diagnostics, technical documentation, international communication" data-de="Elektromobilität, Hochvolt-/BMS-Technik, DTC-Fehlerdiagnose, Remote-Diagnose, technische Dokumentation, internationale Kommunikation">Elektromobilität, Hochvolt-/BMS-Technik, DTC-Fehlerdiagnose, Remote-Diagnose, technische Dokumentation, internationale Kommunikation</dd>
+        </dl>
+      </div>
+    </details>
+
+    <!-- 9. Vinokilo -->
+    <details class="proj" data-id="vinokilo">
+      <summary>
+        <div class="p-head">
+          <div class="p-titlerow"><span class="p-title">Vinokilo</span><span class="p-when">03/2019 – 04/2022</span></div>
+          <div class="p-client" data-en="via Darpdecade GmbH &amp; Co. · Europe-wide · permanent employment" data-de="über Darpdecade GmbH &amp;amp; Co. · europaweit · Festanstellung">über Darpdecade GmbH &amp; Co. · europaweit · Festanstellung</div>
+          <div class="p-short" data-en="Ran the build, logistics and execution of a weekly-changing fashion pop-up event, including cross-border goods logistics." data-de="Leitung von Aufbau, Logistik und Durchführung wöchentlich wechselnder Fashion-Pop-Up-Events, inklusive grenzüberschreitender Warenlogistik.">Leitung von Aufbau, Logistik und Durchführung wöchentlich wechselnder Fashion-Pop-Up-Events, inklusive grenzüberschreitender Warenlogistik.</div>
+          <div class="p-tags"><span data-en="Logistics" data-de="Logistik">Logistik</span><span data-en="International Team Leadership" data-de="Internationale Teamführung">Internationale Teamführung</span><span data-en="Cross-Border Goods Logistics" data-de="Grenzüberschreitende Warenlogistik">Grenzüberschreitende Warenlogistik</span><span data-en="International Procurement" data-de="Internationale Beschaffung">Internationale Beschaffung</span><span data-en="Customs Clearance" data-de="Zollabwicklung">Zollabwicklung</span><span data-en="Project Management" data-de="Projektleitung">Projektleitung</span></div>
+        </div>
+        <div class="chev">＋</div>
+      </summary>
+      <div class="p-body">
+        <div class="p-grid">
+          <div class="p-long">
+            <p data-en="A different city, a different country every week: transport logistics, build and strike, and leading an ever-changing, ten-person international team for Vinokilo, Europe's largest vintage pop-up, including in Germany, Switzerland, Austria, Luxembourg, France and Italy. Also handled shift leadership, warehouse management and process optimisation during ongoing tour operations. Since the vintage goods sold came from different countries and the pop-ups ran right across Europe, cross-border goods logistics was part of daily work too: coordinated the import and onward movement of goods across national borders, much like the international procurement for Seilerei later on." data-de="Jede Woche eine andere Stadt, ein anderes Land: Transport-Logistik, Auf- und Abbau sowie Leitung eines immer wechselnden, zehnköpfigen internationalen Teams für Vinokilo, Europas größten Vintage-Pop-Up, unter anderem in Deutschland, der Schweiz, Österreich, Luxemburg, Frankreich und Italien. Dazu Schichtleitung, Lagerverwaltung und Prozessoptimierung im laufenden Tourbetrieb. Da die verkaufte Vintage-Ware aus verschiedenen Ländern stammt und die Pop-Ups quer durch Europa liefen, gehörte auch die grenzüberschreitende Warenlogistik zum Alltag: Wareneinfuhr und -weitergabe über Landesgrenzen hinweg koordiniert, ähnlich wie später bei der internationalen Beschaffung für die Seilerei.">Jede Woche eine andere Stadt, ein anderes Land: Transport-Logistik, Auf- und Abbau sowie Leitung eines immer wechselnden, zehnköpfigen internationalen Teams für Vinokilo, Europas größten Vintage-Pop-Up, unter anderem in Deutschland, der Schweiz, Österreich, Luxemburg, Frankreich und Italien. Dazu Schichtleitung, Lagerverwaltung und Prozessoptimierung im laufenden Tourbetrieb. Da die verkaufte Vintage-Ware aus verschiedenen Ländern stammt und die Pop-Ups quer durch Europa liefen, gehörte auch die grenzüberschreitende Warenlogistik zum Alltag: Wareneinfuhr und -weitergabe über Landesgrenzen hinweg koordiniert, ähnlich wie später bei der internationalen Beschaffung für die Seilerei.</p>
+          </div>
+          <div class="p-gallery">
+            <button class="thumb" data-gallery="vinokilo" data-index="0"><img loading="lazy" decoding="async" src="images/vinokilo-hero.jpg" alt="Arturo als Event Manager bei Vinokilo, nebenbei als Musiker/DJ aktiv"><span class="zoom-hint">vergrößern</span></button>
+            <figcaption>Vor Ort bei einem der wöchentlichen Vinokilo-Pop-Ups, hier in Berlin.</figcaption>
+          </div>
+        </div>
+        <dl class="spec">
+          <dt data-en="Focus Areas" data-de="Themenbereiche">Themenbereiche</dt><dd data-en="Logistics planning, international team leadership, warehouse management, cross-border goods logistics" data-de="Logistikplanung, internationale Teamführung, Lagerverwaltung, grenzüberschreitende Warenlogistik">Logistikplanung, internationale Teamführung, Lagerverwaltung, grenzüberschreitende Warenlogistik</dd>
+        </dl>
+      </div>
+    </details>
+
+    <!-- 10. CARISSMA research -->
+    <details class="proj" data-id="carissma-sw">
+      <summary>
+        <div class="p-head">
+          <div class="p-titlerow"><span class="p-title">CARISSMA: Autonomes Fahren &amp; Forschungsartikel</span><span class="p-when">2015 – 03/2018</span></div>
+          <div class="p-client" data-en="Research consortium with Audi &amp; BMW · TH Ingolstadt · internship &amp; permanent employment" data-de="Forschungsverbund mit Audi &amp;amp; BMW · TH Ingolstadt · Praktikum &amp;amp; Festanstellung">Forschungsverbund mit Audi &amp; BMW · TH Ingolstadt · Praktikum &amp; Festanstellung</div>
+          <div class="p-short" data-en="From student research assistant to intern and beyond: developed an original pedestrian-detection and path-prediction model, co-authored a research paper." data-de="Vom studentischen Hiwi zum Praktikanten und darüber hinaus: eigenes Fußgängererkennungs- und Pfadprädiktionsmodell entwickelt, mitautorisierter Fachartikel.">Vom studentischen Hiwi zum Praktikanten und darüber hinaus: eigenes Fußgängererkennungs- und Pfadprädiktionsmodell entwickelt, mitautorisierter Fachartikel.</div>
+          <div class="p-tags"><span>Computer Vision</span><span>OpenCV</span><span data-en="Custom ML Model" data-de="Eigenes ML-Modell">Eigenes ML-Modell</span><span data-en="Co-Authored Paper" data-de="Ko-Autor Fachartikel">Ko-Autor Fachartikel</span><span>ViSyTe</span><span>C / C++</span><span>HTML</span><span data-en="Technical Documentation" data-de="Technische Dokumentation">Technische Dokumentation</span></div>
+        </div>
+        <div class="chev">＋</div>
+      </summary>
+      <div class="p-body">
+        <div class="p-grid">
+          <div class="p-long">
+            <p data-en="Started as a student research assistant, then officially taken on as an intern (15 Apr to 14 Sep 2016, per the internship reference), and beyond that active in the Audi/BMW research consortium at CARISSMA (TH Ingolstadt) until 03/2018, on the publicly funded research project &lt;i&gt;&quot;Virtual System Test of Car2X-Based Pedestrian Protection Systems&quot; (ViSyTe)&lt;/i&gt;, project partner IPG Automotive GmbH, led by Igor Doric. That also included helping open the CARISSMA research and testing centre itself – on board from the very start, as the centre was being built." data-de="Begonnen als studentische Hilfskraft (Hiwi), danach offiziell als Praktikant übernommen (15.04. bis 14.09.2016, laut Praktikumszeugnis), und darüber hinaus bis 03/2018 im Forschungsverbund mit Audi und BMW an CARISSMA (TH Ingolstadt) tätig, im öffentlich geförderten Forschungsprojekt &lt;i&gt;&quot;Virtueller System-Test Car2X-basierter Fußgängerschutzsysteme&quot; (ViSyTe)&lt;/i&gt;, Projektpartner IPG Automotive GmbH, unter der Leitung von Igor Doric. Dazu gehörte auch die Unterstützung bei der Eröffnung des Forschungs- und Testzentrums CARISSMA selbst, von Anfang an dabei, als das Zentrum entstand.">Begonnen als studentische Hilfskraft (Hiwi), danach offiziell als Praktikant übernommen (15.04. bis 14.09.2016, laut Praktikumszeugnis), und darüber hinaus bis 03/2018 im Forschungsverbund mit Audi und BMW an CARISSMA (TH Ingolstadt) tätig, im öffentlich geförderten Forschungsprojekt <i>"Virtueller System-Test Car2X-basierter Fußgängerschutzsysteme" (ViSyTe)</i>, Projektpartner IPG Automotive GmbH, unter der Leitung von Igor Doric. Dazu gehörte auch die Unterstützung bei der Eröffnung des Forschungs- und Testzentrums CARISSMA selbst, von Anfang an dabei, als das Zentrum entstand.</p>
+            <p data-en="Developed and coded an original pedestrian-detection model from video footage (OpenCV, C++, Java), trained it myself on roughly 20,000 images from open datasets and surveillance cameras (HOG descriptors + SVM classifier). Built an original path-prediction system on top of that using body pre-indicators, including a custom mathematical model that checked the system's visually detected position data against real reference data. Also handled checking and validating the captured measurement data." data-de="Eigenes Erkennungsmodell für Fußgänger aus Videobildern entwickelt und programmiert (OpenCV, C++, Java), selbst mit rund 20.000 Bildern aus offenen Datensätzen und Überwachungskameras trainiert (HOG-Deskriptoren + SVM-Klassifikator). Darauf aufbauend eine eigene Pfadprädiktion aus Körper-Vorindikatoren entwickelt, inklusive eines eigenen mathematischen Modells, das die vom System visuell erkannten Positionsdaten gegen echte Referenzdaten abglich. Auch die Prüfung und Validierung der erfassten Messdaten gehörte dazu.">Eigenes Erkennungsmodell für Fußgänger aus Videobildern entwickelt und programmiert (OpenCV, C++, Java), selbst mit rund 20.000 Bildern aus offenen Datensätzen und Überwachungskameras trainiert (HOG-Deskriptoren + SVM-Klassifikator). Darauf aufbauend eine eigene Pfadprädiktion aus Körper-Vorindikatoren entwickelt, inklusive eines eigenen mathematischen Modells, das die vom System visuell erkannten Positionsdaten gegen echte Referenzdaten abglich. Auch die Prüfung und Validierung der erfassten Messdaten gehörte dazu.</p>
+            <p data-en="Test automation for this ran on a walking dummy robot I helped co-develop for real car crash tests, demonstrated in front of an audience from industry (including Audi) and university leadership. For validation, the camera data was additionally cross-checked against a motion-capture reference system (Xsens) and Matlab analysis. Co-wrote a scientific research paper as a contributing author." data-de="Die Testautomatisierung dafür lief an einem selbst mitentwickelten, laufenden Dummy-Roboter für echte PKW-Crash-Tests, vorgeführt vor Publikum aus Industrie (u.a. Audi) und Hochschulleitung. Zur Validierung wurden die Kameradaten zusätzlich gegen ein Motion-Capture-Referenzsystem (Xsens) und Matlab-Auswertung abgeglichen. Als Ko-Autor an einem wissenschaftlichen Fachartikel mitgeschrieben.">Die Testautomatisierung dafür lief an einem selbst mitentwickelten, laufenden Dummy-Roboter für echte PKW-Crash-Tests, vorgeführt vor Publikum aus Industrie (u.a. Audi) und Hochschulleitung. Zur Validierung wurden die Kameradaten zusätzlich gegen ein Motion-Capture-Referenzsystem (Xsens) und Matlab-Auswertung abgeglichen. Als Ko-Autor an einem wissenschaftlichen Fachartikel mitgeschrieben.</p>
+            <ul data-en="&lt;li&gt;Original pedestrian-detection model built from video footage (OpenCV, C++, Java)&lt;/li&gt;&lt;li&gt;Self-trained on roughly 20,000 images (HOG descriptors + SVM classifier)&lt;/li&gt;&lt;li&gt;Original path-prediction system from body pre-indicators, incl. a custom mathematical model&lt;/li&gt;&lt;li&gt;Test automation on a co-developed dummy robot for real car crash tests&lt;/li&gt;&lt;li&gt;Validated camera data against a motion-capture reference system (Xsens) and Matlab&lt;/li&gt;&lt;li&gt;Co-authored a scientific research paper&lt;/li&gt;" data-de="&lt;li&gt;Eigenes Fußgängererkennungsmodell aus Videobildern entwickelt (OpenCV, C++, Java)&lt;/li&gt;&lt;li&gt;Selbst mit rund 20.000 Bildern trainiert (HOG-Deskriptoren + SVM-Klassifikator)&lt;/li&gt;&lt;li&gt;Eigene Pfadprädiktion aus Körper-Vorindikatoren inkl. eigenem mathematischen Modell&lt;/li&gt;&lt;li&gt;Testautomatisierung am mitentwickelten Dummy-Roboter für PKW-Crash-Tests&lt;/li&gt;&lt;li&gt;Validierung der Kameradaten gegen Motion-Capture-Referenzsystem (Xsens) und Matlab&lt;/li&gt;&lt;li&gt;Ko-Autor eines wissenschaftlichen Fachartikels&lt;/li&gt;"><li>Eigenes Fußgängererkennungsmodell aus Videobildern entwickelt (OpenCV, C++, Java)</li><li>Selbst mit rund 20.000 Bildern trainiert (HOG-Deskriptoren + SVM-Klassifikator)</li><li>Eigene Pfadprädiktion aus Körper-Vorindikatoren inkl. eigenem mathematischen Modell</li><li>Testautomatisierung am mitentwickelten Dummy-Roboter für PKW-Crash-Tests</li><li>Validierung der Kameradaten gegen Motion-Capture-Referenzsystem (Xsens) und Matlab</li><li>Ko-Autor eines wissenschaftlichen Fachartikels</li></ul>
+          </div>
+          <div class="p-gallery">
+            <button class="thumb" data-gallery="carissma-sw" data-index="0"><img loading="lazy" decoding="async" src="images/carissma-crashtest.jpg" alt="Testautomatisierung mit Dummy-Roboter für PKW-Crash-Tests, Publikumsvorführung mit Audi"><span class="zoom-hint">vergrößern</span></button>
+            <figcaption>Publikumsvorführung der Crash-Test-Automatisierung, u.a. vor Audi-Vertretern.</figcaption>
+            
+            
+          <button class="thumb" data-gallery="carissma-sw" data-index="1"><img loading="lazy" decoding="async" src="images/carissma-sw-3.jpg" alt="Weitere Ansicht des Xsens-Motion-Capture-Systems"><span class="zoom-hint">vergrößern</span></button><figcaption>Weitere Ansicht des Xsens-Motion-Capture-Systems</figcaption><button class="thumb" data-gallery="carissma-sw" data-index="2"><img loading="lazy" decoding="async" src="images/carissma-mocap-new.jpg" alt="Motion-Capture-Anzug (Xsens) zur Validierung der Pfadprädiktion gegen Referenzdaten"><span class="zoom-hint">vergrößern</span></button><figcaption>Motion-Capture-Anzug (Xsens) zur Validierung der Pfadprädiktion gegen Referenzdaten</figcaption></div>
+          <div class="p-gallery-extra">
+            
+          </div>
+        </div>
+
+        <div class="paper-excerpt">
+          <h4>Modeling, Detection and Validation of Pre-Indicators for Pedestrian Path Prediction</h4>
+          <div class="paper-meta">I. Doric, A. Iturriaga, S. Hasirlioglu, T. Brandmeier, CARISSMA, Technische Hochschule Ingolstadt <i data-en="· Excerpt from the introduction" data-de="· Snippet aus der Einleitung">· Snippet aus der Einleitung</i></div>
+          <p>Human recognition through digital image processing has been an extensive topic of research within companies for over 20 years, with applications going from video security and surveillance systems, to real time pedestrian detection for automatic emergency brake algorithms in the automotive industry. […] This paper focuses on the process followed in order to add an extra layer of accuracy to a traditional pedestrian detection algorithm, by implementing human path prediction based on body pre-indicators. The algorithm allows us to recognize the current status of the person and anticipate where it is going to be in the next point in time.</p>
+          <div class="paper-note" data-en="Excerpt from a working paper written as part of the CARISSMA research, co-author, shown for reference." data-de="Auszug aus einem im Rahmen der CARISSMA-Forschung entstandenen Arbeitspapier, Ko-Autor, zur Ansicht.">Auszug aus einem im Rahmen der CARISSMA-Forschung entstandenen Arbeitspapier, Ko-Autor, zur Ansicht.</div>
+        </div>
+
+        <div class="codepics">
+          <button class="thumb" data-gallery="carissma-code" data-index="0"><img loading="lazy" decoding="async" src="images/code-nice.jpg" alt="Eigener, kommentierter C++-Code der Pfadprädiktion"></button>
+          <button class="thumb" data-gallery="carissma-code" data-index="1"><img loading="lazy" decoding="async" src="images/code-working.jpg" alt="Eigener Fußgängererkennungs-Algorithmus in Aktion, live im Debugger"></button>
+          <button class="thumb" data-gallery="carissma-code" data-index="2"><img loading="lazy" decoding="async" src="images/code-capture1.jpg" alt="Weiterer Ausschnitt des selbst geschriebenen Erkennungs-Codes"></button>
+        </div>
+
+        <dl class="spec">
+          <dt data-en="Software &amp; Methods" data-de="Software &amp;amp; Methoden">Software &amp; Methoden</dt><dd data-en="C/C++, Java, OpenCV, HOG descriptors + SVM classifier (self-trained), custom mathematical prediction model, Kalman filter, Matlab, Xsens motion capture, Oculus VR" data-de="C/C++, Java, OpenCV, HOG-Deskriptoren + SVM-Klassifikator (selbst trainiert), eigenes mathematisches Prädiktionsmodell, Kalman-Filter, Matlab, Xsens Motion Capture, Oculus VR">C/C++, Java, OpenCV, HOG-Deskriptoren + SVM-Klassifikator (selbst trainiert), eigenes mathematisches Prädiktionsmodell, Kalman-Filter, Matlab, Xsens Motion Capture, Oculus VR</dd>
+          <dt data-en="Focus Areas" data-de="Themenbereiche">Themenbereiche</dt><dd data-en="Computer vision, machine learning, vehicle safety, scientific writing &amp; peer review (IEEE format)" data-de="Computer Vision, maschinelles Lernen, Fahrzeugsicherheit, wissenschaftliches Schreiben &amp;amp; Peer Review (IEEE-Format)">Computer Vision, maschinelles Lernen, Fahrzeugsicherheit, wissenschaftliches Schreiben &amp; Peer Review (IEEE-Format)</dd>
+        </dl>
+      </div>
+    </details>
+
+    <!-- 11. CARISSMA hardware -->
+    <details class="proj" data-id="carissma-hw">
+      <summary>
+        <div class="p-head">
+          <div class="p-titlerow"><span class="p-title">CARISSMA: Hardware-Engineering, Robotik &amp; Prototyping</span><span class="p-when">2015 – 03/2018</span></div>
+          <div class="p-client" data-en="Research consortium with Audi &amp; BMW · TH Ingolstadt · internship &amp; permanent employment" data-de="Forschungsverbund mit Audi &amp;amp; BMW · TH Ingolstadt · Praktikum &amp;amp; Festanstellung">Forschungsverbund mit Audi &amp; BMW · TH Ingolstadt · Praktikum &amp; Festanstellung</div>
+          <div class="p-short" data-en="Designed and built an original pneumatically actuated robot as well as microcontroller and FPGA prototypes." data-de="Eigenen luftdruckgesteuerten Roboter sowie Microcontroller- und FPGA-Prototypen entworfen und gefertigt.">Eigenen luftdruckgesteuerten Roboter sowie Microcontroller- und FPGA-Prototypen entworfen und gefertigt.</div>
+          <div class="p-tags"><span data-en="Robotics" data-de="Robotik">Robotik</span><span data-en="Pneumatics" data-de="Pneumatik">Pneumatik</span><span>Microcontroller</span><span>FPGA</span><span data-en="PCB Soldering" data-de="PCB-Löten">PCB-Löten</span><span>VHDL</span><span data-en="Technical Documentation" data-de="Technische Dokumentation">Technische Dokumentation</span></div>
+        </div>
+        <div class="chev">＋</div>
+      </summary>
+      <div class="p-body">
+        <div class="p-grid">
+          <div class="p-long">
+            <p data-en="Alongside the software side, designed and built the hardware together with the team: planning and constructing a pneumatically actuated robot from the first sketch to working pneumatics with hand-soldered muscle and actuator control circuits. Also designed, programmed and manufactured custom microcontroller circuits, control cabinets and FPGA prototypes for vehicle-safety research." data-de="Parallel zur Software-Seite zusammen mit dem Team die Hardware entworfen und gebaut: Planung und Aufbau eines luftdruckgesteuerten Roboters von der ersten Skizze bis zur funktionierenden Pneumatik mit eigens gelöteten Muskel- und Aktuatorsteuerungen. Dazu Entwurf, Programmierung und Fertigung eigener Microcontroller-Schaltungen, Schaltschränke und FPGA-Prototypen für die Fahrzeugsicherheitsforschung.">Parallel zur Software-Seite zusammen mit dem Team die Hardware entworfen und gebaut: Planung und Aufbau eines luftdruckgesteuerten Roboters von der ersten Skizze bis zur funktionierenden Pneumatik mit eigens gelöteten Muskel- und Aktuatorsteuerungen. Dazu Entwurf, Programmierung und Fertigung eigener Microcontroller-Schaltungen, Schaltschränke und FPGA-Prototypen für die Fahrzeugsicherheitsforschung.</p>
+            <p data-en="Worked with a CAD design engineer on the layout of the muscles and hardware to make mounting points and positioning as efficient as possible: the robot is built to be driven over, and constructed modularly so individual parts can be swapped out quickly during live testing." data-de="Für die Anordnung von Muskeln und Hardware zusammen mit einem CAD-Designer-Ingenieur gearbeitet, um Halterpunkte und Positionierung so effizient wie möglich zu gestalten: der Roboter ist so ausgelegt, dass er überfahren werden kann, und modular gebaut, sodass sich einzelne Teile im laufenden Testbetrieb schnell austauschen lassen.">Für die Anordnung von Muskeln und Hardware zusammen mit einem CAD-Designer-Ingenieur gearbeitet, um Halterpunkte und Positionierung so effizient wie möglich zu gestalten: der Roboter ist so ausgelegt, dass er überfahren werden kann, und modular gebaut, sodass sich einzelne Teile im laufenden Testbetrieb schnell austauschen lassen.</p>
+          </div>
+          <div class="p-gallery">
+            <button class="thumb" data-gallery="carissma-hw" data-index="0"><img loading="lazy" decoding="async" src="images/carissma-microcontroller.jpg" alt="Selbst gefertigte Microcontroller-Schaltungen und FPGA-Prototypen im Roboter"><span class="zoom-hint">vergrößern</span></button>
+            <figcaption>Eigene Microcontroller-/FPGA-Verkabelung im Inneren des Roboters.</figcaption>
+          </div>
+          <div class="p-gallery-extra">
+            
+            
+            
+          <button class="thumb" data-gallery="carissma-hw" data-index="1"><img loading="lazy" decoding="async" src="images/carissma-hw-2.jpg" alt="Arm des luftdruckgesteuerten Roboters, Detailansicht"><span class="zoom-hint">vergrößern</span></button><button class="thumb" data-gallery="carissma-hw" data-index="2"><img loading="lazy" decoding="async" src="images/carissma-hw-diagram1.jpg" alt="Handskizze der Pneumatik-Steuerung für den Roboter"><span class="zoom-hint">vergrößern</span></button><button class="thumb" data-gallery="carissma-hw" data-index="3"><img loading="lazy" decoding="async" src="images/carissma-hw-diagram2.jpg" alt="Diagramm des tatsächlich gebauten Pneumatik-Aufbaus"><span class="zoom-hint">vergrößern</span></button><button class="thumb" data-gallery="carissma-hw" data-index="4"><img loading="lazy" decoding="async" src="images/carissma-hw-3.jpg" alt="Mit dem fertigen Roboterarm im Labor, Daumen hoch"><span class="zoom-hint">vergrößern</span></button></div>
+        </div>
+        <dl class="spec">
+          <dt>Hardware &amp; Tools</dt><dd data-en="Pneumatic actuators, soldering station, custom microcontroller circuit designs, FPGAs, control cabinets" data-de="Pneumatik-Aktuatoren, Lötstation, eigene Microcontroller-Schaltpläne, FPGAs, Schaltschränke">Pneumatik-Aktuatoren, Lötstation, eigene Microcontroller-Schaltpläne, FPGAs, Schaltschränke</dd>
+        </dl>
+      </div>
+    </details>
+
+    <!-- 12. Oportun Financial -->
+    <details class="proj" data-id="oportun">
+      <summary>
+        <div class="p-head">
+          <div class="p-titlerow"><span class="p-title">Oportun Financial</span><span class="p-when">05/2015 – 09/2015</span></div>
+          <div class="p-client" data-en="Zapopan, Mexico · permanent employment" data-de="Zapopan, Mexiko · Festanstellung">Zapopan, Mexiko · Festanstellung</div>
+          <div class="p-short" data-en="Team lead and customer advisor at a bilingual call centre for a US financial services provider." data-de="Teamleiter und Kundenberater in einem bilingualen Call-Center für einen US-Finanzdienstleister.">Teamleiter und Kundenberater in einem bilingualen Call-Center für einen US-Finanzdienstleister.</div>
+          <div class="p-tags"><span data-en="Team Leadership" data-de="Teamleitung">Teamleitung</span><span data-en="Bilingual Customer Service" data-de="Bilingualer Kundenservice">Bilingualer Kundenservice</span><span data-en="Sales" data-de="Vertrieb">Vertrieb</span><span data-en="Multilingual Technical Support" data-de="Mehrsprachiger technischer Support">Mehrsprachiger technischer Support</span></div>
+        </div>
+        <div class="chev">＋</div>
+      </summary>
+      <div class="p-body">
+        <div class="p-grid">
+          <div class="p-long">
+            <p data-en="First professional role before CARISSMA: team lead and customer advisor at Oportun Financial, a US financial services provider running bilingual customer service out of Mexico for the US market. Responsible for correct execution and planning of sales, plus staff appraisals and customer advising on complaints." data-de="Erste berufliche Station vor CARISSMA: als Teamleiter und Kundenberater bei Oportun Financial, einem US-amerikanischen Finanzdienstleister mit bilingualem Kundenservice aus Mexiko heraus für den US-Markt. Verantwortlich für die korrekte Ausführung und Planung des Vertriebs, dazu Mitarbeiterbeurteilung und Kundenberatung in Beschwerdefällen.">Erste berufliche Station vor CARISSMA: als Teamleiter und Kundenberater bei Oportun Financial, einem US-amerikanischen Finanzdienstleister mit bilingualem Kundenservice aus Mexiko heraus für den US-Markt. Verantwortlich für die korrekte Ausführung und Planung des Vertriebs, dazu Mitarbeiterbeurteilung und Kundenberatung in Beschwerdefällen.</p>
+          </div>
+        </div>
+        <dl class="spec">
+          <dt data-en="Focus Areas" data-de="Themenbereiche">Themenbereiche</dt><dd data-en="Bilingual customer service (ES/EN), team leadership, sales management, complaint handling" data-de="Bilingualer Kundenservice (ES/EN), Teamleitung, Vertriebssteuerung, Beschwerdemanagement">Bilingualer Kundenservice (ES/EN), Teamleitung, Vertriebssteuerung, Beschwerdemanagement</dd>
+        </dl>
+      </div>
+    </details>
+
+  </section>
+
+  <section class="block" id="werkstatt">
+    <div class="block-head">
+      <h2 class="section-title" data-en="Workshop &amp; Hands-On Commissions" data-de="Werkstatt &amp;amp; Handwerkliche Aufträge">Werkstatt &amp; Handwerkliche Aufträge</h2>
+      <span class="count-tag" data-en="ongoing" data-de="laufend">laufend</span>
+    </div>
+    <p class="section-sub" data-en="Not a single client, but the own woodworking shop and electronics bench: commissions for private households, events and industrial clients, including Commerzbank, building wine-bottle display models for an investment wine festival." data-de="Kein einzelner Kunde, sondern die eigene Holzwerkstatt und Elektronikbank: Aufträge für Privathaushalte, Events und Industriekunden, darunter Commerzbank, für Weinflaschen-Deko-Modellbau zu einem Investment-Weinfest.">Kein einzelner Kunde, sondern die eigene Holzwerkstatt und Elektronikbank: Aufträge für Privathaushalte, Events und Industriekunden, darunter Commerzbank, für Weinflaschen-Deko-Modellbau zu einem Investment-Weinfest.</p>
+    <div class="workshop-grid">
+      <div class="workshop-card">
+        <button class="thumb" data-gallery="werkstatt-elektro" data-index="0"><img loading="lazy" decoding="async" src="images/project-elektro.jpg" alt="Installation und Wartung von Elektro-Infrastruktur und Schaltschränken"></button>
+        <b data-en="Electrical Infrastructure" data-de="Elektro-Infrastruktur">Elektro-Infrastruktur</b>
+        <p data-en="Installation, servicing and maintenance of temporary &amp; permanent electrical infrastructure and control cabinets." data-de="Installation, Wartung und Instandhaltung temporärer &amp;amp; permanenter Elektro-Infrastruktur und Schaltschränke.">Installation, Wartung und Instandhaltung temporärer &amp; permanenter Elektro-Infrastruktur und Schaltschränke.</p>
+      </div>
+      <div class="workshop-card">
+        <button class="thumb" data-gallery="werkstatt-pcb" data-index="0"><img loading="lazy" decoding="async" src="images/project-pcb.jpg" alt="Mikro-Löten-Projekt: PCB-Aufbau für Wearable Technology"></button>
+        <b>Wearable Technology</b>
+        <p data-en="Own &quot;micro-soldering&quot; project: fabricating and assembling PCBs and circuit designs for wearables." data-de="Eigenes &quot;Mikro-Löten&quot;-Projekt: Herstellung und Aufbau von PCBs und Schaltplänen für Wearables.">Eigenes "Mikro-Löten"-Projekt: Herstellung und Aufbau von PCBs und Schaltplänen für Wearables.</p>
+      </div>
+      <div class="workshop-card">
+        <div class="pair">
+          <button class="thumb" data-gallery="werkstatt-instrumente" data-index="0"><img loading="lazy" decoding="async" src="images/instrumente-posaunehero-2.jpg" alt="Trombone-Hero-Prototyp mit Time-of-Flight-Sensor, Bluetooth und Handy-Anbindung, daneben das eigene LED-Lichtsystem"></button>
+          <button class="thumb" data-gallery="werkstatt-instrumente" data-index="1"><img loading="lazy" decoding="async" src="images/instrumente-trumpethero.jpg" alt="Trumpet-Hero-Prototyp: selbst programmiertes Noten-Display auf einem TFT-Bildschirm"></button>
+        </div>
+        <div class="extra-row">
+          <button class="thumb" data-gallery="werkstatt-instrumente" data-index="2"><img loading="lazy" decoding="async" src="images/instrumente-posaunehero-1.jpg" alt="Erster Trombone-Hero-Prototyp: ESP32-Microcontroller direkt an der Posaune verbaut"></button>
+          <button class="thumb" data-gallery="werkstatt-instrumente" data-index="3"><img loading="lazy" decoding="async" src="images/instrumente-soundtolight.jpg" alt="Prototyp für ein eigenes Sound-to-Light-Lichtsystem mit direkter Steuerung über Synthesizer und MIDI-Instrumente"></button>
+        </div>
+        <b data-en="Music Tech: Prototypes &amp; Product Development" data-de="Musiktechnik: Prototypen &amp;amp; Produktentwicklung">Musiktechnik: Prototypen &amp; Produktentwicklung</b>
+        <p data-en="Original prototypes where electronics meets music: &quot;Trombone Hero&quot; with a time-of-flight sensor and Bluetooth, a live note display for brass players, a MIDI synthesizer and a sound-to-light system. Part maker project, part product idea." data-de="Eigene Prototypen an der Schnittstelle von Elektronik und Musik: &quot;Trombone Hero&quot; mit Time-of-Flight-Sensor und Bluetooth, ein Live-Noten-Display für Blechbläser, ein MIDI-Synthesizer und ein Sound-to-Light-System. Teils Bastelprojekt, teils Produktidee.">Eigene Prototypen an der Schnittstelle von Elektronik und Musik: "Trombone Hero" mit Time-of-Flight-Sensor und Bluetooth, ein Live-Noten-Display für Blechbläser, ein MIDI-Synthesizer und ein Sound-to-Light-System. Teils Bastelprojekt, teils Produktidee.</p>
+      </div>
+      <div class="workshop-card">
+        <button class="thumb" data-gallery="werkstatt-holz" data-index="0"><img loading="lazy" decoding="async" src="images/hochbett-1.jpg" alt="Selbstgebautes Hochbett mit Wendeltreppe"></button>
+        <div class="extra-row">
+          <button class="thumb" data-gallery="werkstatt-holz" data-index="1"><img loading="lazy" decoding="async" src="images/werkstatt-hochbett.jpg" alt="Selbstgebautes Hochbett mit Treppe, Gesamtansicht der Werkstatt"></button>
+          <button class="thumb" data-gallery="werkstatt-holz" data-index="2"><img loading="lazy" decoding="async" src="images/werkstatt-weinfest.jpg" alt="Riesen-Weinflaschen als Deko-Modellbau für ein Investment-Weinfest, Auftrag von Commerzbank"></button>
+        </div>
+        <b data-en="Loft Beds &amp; Trade-Show Builds" data-de="Hochbett- &amp;amp; Messebau">Hochbett- &amp; Messebau</b>
+        <p data-en="Hands-on commissions for private households, events and industrial clients, including Commerzbank." data-de="Handwerkliche Aufträge für Privathaushalte, Events und Industriekunden, u.a. Commerzbank.">Handwerkliche Aufträge für Privathaushalte, Events und Industriekunden, u.a. Commerzbank.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="musik">
+    <div class="block-head">
+      <h2 class="section-title" data-en="Music Career" data-de="Musikkarriere">Musikkarriere</h2>
+      <span class="count-tag" data-en="since 2017" data-de="seit 2017">seit 2017</span>
+    </div>
+    <p class="section-sub" data-en="Started alongside the research work, continued without interruption since moving back to Germany: music production, instrumental practice and live performance, with a clear overlap into audio and event technology." data-de="Parallel zur Forschung begonnen, seit der Rückkehr nach Deutschland durchgehend weitergeführt: Musikproduktion, Instrumentalpraxis und Live-Auftritte, mit klarer Nähe zu Ton- und Veranstaltungstechnik.">Parallel zur Forschung begonnen, seit der Rückkehr nach Deutschland durchgehend weitergeführt: Musikproduktion, Instrumentalpraxis und Live-Auftritte, mit klarer Nähe zu Ton- und Veranstaltungstechnik.</p>
+    <div class="p-grid">
+      <div class="p-long">
+        <p data-en="Freelance musician, instrumentalist and media producer, over 200 concerts played. Music production (composition, studio &amp; live recording, mixing, mastering) as well as live performances solo and with a band, including at Glastonbury Festival, Fusion Festival, Landjuweel (Netherlands), Pennabilli (Italy), and in India, Dubai and Mexico. Instruments: piano, synthesizer, ukulele, vocals, bass, percussion. On top of that, the events where I was involved as audio engineer, booking agent or tour manager." data-de="Freiberuflicher Musiker, Instrumentalist und Medienproduzent, über 200 Konzerte gespielt. Musikproduktion (Komposition, Studio- &amp;amp; Live-Recording, Mixing, Mastering) sowie Live-Auftritte solo und mit Band, u.a. auf dem Glastonbury Festival, dem Fusion Festival, Landjuweel (Niederlande), Pennabilli (Italien) sowie in Indien, Dubai und Mexiko. Instrumente: Klavier, Synthesizer, Ukulele, Gesang, Bass, Percussion. Dazu kommen die Events, bei denen ich selbst als Tontechniker, Booking- oder Tourmanager mit dabei war.">Freiberuflicher Musiker, Instrumentalist und Medienproduzent, über 200 Konzerte gespielt. Musikproduktion (Komposition, Studio- &amp; Live-Recording, Mixing, Mastering) sowie Live-Auftritte solo und mit Band, u.a. auf dem Glastonbury Festival, dem Fusion Festival, Landjuweel (Niederlande), Pennabilli (Italien) sowie in Indien, Dubai und Mexiko. Instrumente: Klavier, Synthesizer, Ukulele, Gesang, Bass, Percussion. Dazu kommen die Events, bei denen ich selbst als Tontechniker, Booking- oder Tourmanager mit dabei war.</p>
+        <p data-en="This work as a musician and mixing engineer overlaps directly with the event and audio technology above: booking, touring, stage and sound-system build, and console work (including Midas M32) are as much a part of it as playing the music itself." data-de="Diese Praxis als Musiker und Mixing Engineer überschneidet sich direkt mit der Veranstaltungs- und Tontechnik oben: Booking, Touring, Bühnen- und Soundsystem-Aufbau sowie Mischpultarbeit (u.a. Midas M32) gehören ebenso dazu wie das eigentliche Musizieren selbst.">Diese Praxis als Musiker und Mixing Engineer überschneidet sich direkt mit der Veranstaltungs- und Tontechnik oben: Booking, Touring, Bühnen- und Soundsystem-Aufbau sowie Mischpultarbeit (u.a. Midas M32) gehören ebenso dazu wie das eigentliche Musizieren selbst.</p>
+        <dl class="spec" style="margin-top:14px;">
+          <dt data-en="Music Production" data-de="Musikproduktion">Musikproduktion</dt><dd data-en="Composition, studio &amp; live recording, mixing, mastering" data-de="Komposition, Studio &amp;amp; Live-Recording, Mixing, Mastering">Komposition, Studio &amp; Live-Recording, Mixing, Mastering</dd>
+          <dt data-en="Instruments" data-de="Musikinstrumente">Musikinstrumente</dt><dd>Klavier, Synthesizer, Ukulele, Gesang, Bass, Percussion</dd>
+          <dt data-en="Live Performances" data-de="Eigene Auftritte">Eigene Auftritte</dt><dd data-en="Glastonbury (England), Fusion Festival (Germany), Landjuweel (Netherlands), Pennabilli (Italy), plus India, Dubai, Mexico, incl. the &quot;La Fanfarria del Capitan&quot; Eurotour across 8 European countries, among others" data-de="Glastonbury (England), Fusion Festival (Deutschland), Landjuweel (Holland), Pennabilli (Italien), Indien, Dubai, Mexiko, u.a. die &quot;La Fanfarria del Capitan&quot;-Eurotour durch 8 europäische Länder">Glastonbury (England), Fusion Festival (Deutschland), Landjuweel (Holland), Pennabilli (Italien), Indien, Dubai, Mexiko, u.a. die "La Fanfarria del Capitan"-Eurotour durch 8 europäische Länder</dd>
+          <dt data-en="Production" data-de="Produktion">Produktion</dt><dd data-en="Event organisation, logistics &amp; management, audio engineering, booking and tour management" data-de="Event-Veranstaltung, Logistik und Management, Tontechniker, Booking und Tourmanagement">Event-Veranstaltung, Logistik und Management, Tontechniker, Booking und Tourmanagement</dd>
+        </dl>
+        <div class="p-tags" style="margin-top:16px;"><span data-en="Vocals" data-de="Gesang">Gesang</span><span>Bass</span><span data-en="Piano" data-de="Klavier">Klavier</span><span>Synthesizer</span><span>Ukulele</span><span>Percussion</span><span data-en="Composition" data-de="Komposition">Komposition</span><span data-en="Mixing &amp; Mastering" data-de="Mixing &amp;amp; Mastering">Mixing &amp; Mastering</span><span data-en="Audio Engineer" data-de="Tontechniker">Tontechniker</span><span>Booking</span><span data-en="Tour Manager" data-de="Tourmanager">Tourmanager</span><span>Midas M32</span></div>
+      </div>
+      <div class="p-gallery">
+        
+        
+        <button class="thumb" data-gallery="musik" data-index="0"><img loading="lazy" decoding="async" src="images/music-3.jpg" alt="Arturo als Sänger und Bassist auf der Bühne mit Band"><span class="zoom-hint">vergrößern</span></button>
+        <figcaption data-en="As singer and bassist on stage, with the band." data-de="Als Sänger und Bassist auf der Bühne, mit Band.">Als Sänger und Bassist auf der Bühne, mit Band.</figcaption>
+      <button class="thumb" data-gallery="musik" data-index="1"><img loading="lazy" decoding="async" src="images/music-tour-flyer.jpg" alt="Tourplakat und komplette Tourdaten der Band La Fanfarria del Capitan, Eurotour 14 durch acht europäische Länder, Juni bis August 2024"><span class="zoom-hint">vergrößern</span></button><figcaption data-en="Tour poster and full tour dates: &quot;La Fanfarria del Capitan&quot; Eurotour #14 through eight European countries." data-de="Tourplakat und komplette Tourdaten: &quot;La Fanfarria del Capitan&quot;-Eurotour #14 durch acht europäische Länder.">Tourplakat und komplette Tourdaten: "La Fanfarria del Capitan"-Eurotour #14 durch acht europäische Länder.</figcaption></div>
+      <div class="p-gallery-extra">
+        <button class="thumb" data-gallery="musik" data-index="2"><img loading="lazy" decoding="async" src="images/music-5.jpg" alt="Musik üben im Backstage-Container beim Glastonbury Festival"><span class="zoom-hint">vergrößern</span></button>
+        
+        <button class="thumb" data-gallery="musik" data-index="3"><img loading="lazy" decoding="async" src="images/music-8.jpg" alt="Mit Band auf der Bühne, Publikum jubelt"><span class="zoom-hint">vergrößern</span></button>
+      <button class="thumb" data-gallery="musik" data-index="4"><img loading="lazy" decoding="async" src="images/music-7.jpg" alt="Analoges Techno-Synthesizer-Set beim Fusion Festival"><span class="zoom-hint">vergrößern</span></button><button class="thumb" data-gallery="musik" data-index="5"><img loading="lazy" decoding="async" src="images/music-2.jpg" alt="Arturo als Musiker/Produzent live am Mischpult beim Fusion Festival"><span class="zoom-hint">vergrößern</span></button></div>
+    </div>
+  </section>
+
+  <section class="block" id="studium">
+    <div class="block-head">
+      <h2 class="section-title" data-en="Education" data-de="Studium">Studium</h2>
+    </div>
+    <p class="section-sub" data-en="Electronic &amp; Computer Engineering in Mexico, with a multi-year research stay at TH Ingolstadt in the middle of it, later media production in Wiesbaden alongside work." data-de="Electronic &amp;amp; Computer Engineering in Mexiko, mit einem mehrjährigen Forschungsaufenthalt an der TH Ingolstadt mittendrin, später berufsbegleitend Medienproduktion in Wiesbaden.">Electronic &amp; Computer Engineering in Mexiko, mit einem mehrjährigen Forschungsaufenthalt an der TH Ingolstadt mittendrin, später berufsbegleitend Medienproduktion in Wiesbaden.</p>
+    <div class="study-grid">
+      <div class="study-card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 2 7l10 5 10-5-10-5z"></path><path d="M6 10v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"></path></svg>
+        <span class="degree">Media: Conception and Production</span>
+        <span class="org">Hochschule RheinMain, Wiesbaden</span>
+        <span class="when">04/2018 – 09/2024</span>
+        <p data-en="No degree (discontinued for work-related reasons)." data-de="Ohne Abschluss (OA), aus arbeitstechnischen Gründen abgebrochen.">Ohne Abschluss (OA), aus arbeitstechnischen Gründen abgebrochen.</p>
+      </div>
+      <div class="study-card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 2 7l10 5 10-5-10-5z"></path><path d="M6 10v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"></path></svg>
+        <span class="degree">Electronic and Computer Engineering</span>
+        <span class="org" data-en="Tecnológico de Monterrey, Guadalajara, Mexico" data-de="Tecnológico de Monterrey, Guadalajara, Mexiko">Tecnológico de Monterrey, Guadalajara, Mexiko</span>
+        <span class="when">08/2013 – 08/2016</span>
+        <p data-en="Grade: 1.6 (German scale)." data-de="Note 1,6.">Note 1,6.</p>
+        <p data-en="Including a research stay at the Technische Hochschule Ingolstadt." data-de="Mit Forschungsaufenthalt an der Technischen Hochschule Ingolstadt.">Mit Forschungsaufenthalt an der Technischen Hochschule Ingolstadt.</p>
+      </div>
+      <div class="study-card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 2 7l10 5 10-5-10-5z"></path><path d="M6 10v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"></path></svg>
+        <span class="degree">Allgemeine Hochschulreife</span>
+        <span class="org" data-en="Instituto de Ciencias, Zapopan, Mexico" data-de="Instituto de Ciencias, Zapopan, Mexiko">Instituto de Ciencias, Zapopan, Mexiko</span>
+        <span class="when">08/2010 – 06/2013</span>
+        <p data-en="Grade: 1.4 (German scale). Grammar-school track (Bachillerato)." data-de="Note 1,4. Gymnasiale Oberstufe (Bachillerato).">Note 1,4. Gymnasiale Oberstufe (Bachillerato).</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="community">
+    <div class="block-head">
+      <h2 class="section-title" data-en="Own Projects, Volunteering &amp; Community" data-de="Eigene Projekte, Ehrenamt &amp;amp; Community">Eigene Projekte, Ehrenamt &amp; Community</h2>
+    </div>
+    <p class="section-sub" data-en="Hobby research, workshops and volunteer work – not paid client work, but part of the same hands-on technical profile." data-de="Hobby-Forschung, Workshops und ehrenamtliches Engagement, nicht bezahlte Kundenarbeit, aber Teil desselben handwerklich-technischen Profils.">Hobby-Forschung, Workshops und ehrenamtliches Engagement, nicht bezahlte Kundenarbeit, aber Teil desselben handwerklich-technischen Profils.</p>
+
+    <details class="proj">
+      <summary>
+        <div class="p-head">
+          <div class="p-titlerow"><span class="p-title">GPN: Gulaschprogrammiernacht</span><span class="p-when">06/2026</span></div>
+          <div class="p-client" data-en="Karlsruhe · Chaos Computer Club hacker event · own hobby research project" data-de="Karlsruhe · Chaos-Computer-Club-Hackerevent · eigenes Hobby-Forschungsprojekt">Karlsruhe · Chaos-Computer-Club-Hackerevent · eigenes Hobby-Forschungsprojekt</div>
+          <div class="p-short" data-en="Gave my own workshop on a self-developed, sewable LED wearable system." data-de="Eigenen Workshop über ein selbst entwickeltes, nähbares LED-Wearable-System gegeben.">Eigenen Workshop über ein selbst entwickeltes, nähbares LED-Wearable-System gegeben.</div>
+          <div class="p-tags"><span>Wearable Technology</span><span data-en="Workshop/Teaching" data-de="Workshop/Lehre">Workshop/Lehre</span><span data-en="Conductive Thread" data-de="Leitfähiger Faden">Leitfähiger Faden</span><span data-en="Public Speaking" data-de="Öffentliches Sprechen">Öffentliches Sprechen</span></div>
+        </div>
+        <div class="chev">＋</div>
+      </summary>
+      <div class="p-body">
+        <div class="p-grid">
+          <div class="p-long">
+            <p data-en="Together with a friend, gave my own workshop at GPN (Gulaschprogrammiernacht) in Karlsruhe, a well-known hacker and making event run by the Chaos Computer Club: presented a self-developed, modular, sewable LED system. Participants could sew the LEDs into their own clothing themselves using conductive thread, by hand or machine. From the original idea through prototyping to presenting it publicly to a technical audience." data-de="Gemeinsam mit einem Kumpel einen eigenen Workshop bei der GPN (Gulaschprogrammiernacht) in Karlsruhe gegeben, einem bekannten Hacker- und Making-Event des Chaos Computer Clubs: Vorstellung eines selbst entwickelten, modularen, nähbaren LED-Systems. Teilnehmende konnten die LEDs mit leitfähigem Faden, per Hand oder Nähmaschine, selbst in eigene Kleidungsstücke einnähen. Von der eigenen Idee über den Prototypenbau bis zur öffentlichen Vermittlung an ein technisches Fachpublikum.">Gemeinsam mit einem Kumpel einen eigenen Workshop bei der GPN (Gulaschprogrammiernacht) in Karlsruhe gegeben, einem bekannten Hacker- und Making-Event des Chaos Computer Clubs: Vorstellung eines selbst entwickelten, modularen, nähbaren LED-Systems. Teilnehmende konnten die LEDs mit leitfähigem Faden, per Hand oder Nähmaschine, selbst in eigene Kleidungsstücke einnähen. Von der eigenen Idee über den Prototypenbau bis zur öffentlichen Vermittlung an ein technisches Fachpublikum.</p>
+          </div>
+          <div class="p-gallery">
+            <button class="thumb" data-gallery="gpn" data-index="0"><img loading="lazy" decoding="async" src="images/gpn-hero.jpg" alt="Werkstatt-Tisch beim GPN-Workshop mit LED-Streifen, Stoffproben und leitfähigem Nähgarn"><span class="zoom-hint">vergrößern</span></button>
+            <figcaption data-en="Materials table at my own workshop: LEDs, fabric samples, conductive thread." data-de="Materialtisch beim eigenen Workshop: LEDs, Stoffproben, leitfähiger Faden.">Materialtisch beim eigenen Workshop: LEDs, Stoffproben, leitfähiger Faden.</figcaption>
+            <button class="thumb" data-gallery="gpn" data-index="1"><img loading="lazy" decoding="async" src="images/gpn-2.jpg" alt="Workshop-Situation mit Teilnehmenden beim Nähen der LEDs, Gesichter aus Datenschutzgründen unkenntlich gemacht"><span class="zoom-hint">vergrößern</span></button>
+            <figcaption data-en="Mid-workshop; participants' faces blurred for privacy." data-de="Mitten im Workshop, Gesichter der Teilnehmenden aus Datenschutzgründen unkenntlich gemacht.">Mitten im Workshop, Gesichter der Teilnehmenden aus Datenschutzgründen unkenntlich gemacht.</figcaption>
+          </div>
+        </div>
+        <dl class="spec">
+          <dt>Hardware &amp; Tools</dt><dd data-en="Addressable LEDs, conductive sewing thread, sewing machine, custom modular circuit design" data-de="Adressierbare LEDs, leitfähiger Nähfaden, Nähmaschine, eigenes modulares Schaltungsdesign">Adressierbare LEDs, leitfähiger Nähfaden, Nähmaschine, eigenes modulares Schaltungsdesign</dd>
+          <dt data-en="Focus Areas" data-de="Themenbereiche">Themenbereiche</dt><dd data-en="Wearable technology, e-textiles, workshop design &amp; delivery" data-de="Wearable Technology, E-Textilien, Workshop-Konzeption &amp;amp; -Durchführung">Wearable Technology, E-Textilien, Workshop-Konzeption &amp; -Durchführung</dd>
+        </dl>
+      </div>
+    </details>
+
+    <div class="ehrenamt-list" style="margin-top:16px;">
+      <div class="eh-item">
+        <div class="row"><span class="org">Voice of Miracles Living Church Int'l</span><span class="when">05/2019 – 06/2023</span></div>
+        <p data-en="Media producer: logos, design, video and music production, websites. Frankfurt / Abuja." data-de="Medienproduzent, Logos, Design, Video- und Musikproduktion, Webseiten. Frankfurt / Abuja.">Medienproduzent, Logos, Design, Video- und Musikproduktion, Webseiten. Frankfurt / Abuja.</p>
+      </div>
+      <div class="eh-item">
+        <div class="row"><span class="org">LEO Club Ingolstadt</span><span class="when">04/2016 – 03/2020</span></div>
+        <p data-en="Member; board/IT manager (09/2017–03/2018)." data-de="Mitglied; Vorstand/IT-Manager (09/2017–03/2018).">Mitglied; Vorstand/IT-Manager (09/2017–03/2018).</p>
+      </div>
+      <div class="eh-item">
+        <div class="row"><span class="org">Network &amp; International Culture Exchange, TH Ingolstadt</span><span class="when">02/2016 – 09/2017</span></div>
+        <p data-en="Events manager, buddy programme for international students, own DAAD scholarship winter term 2016." data-de="Veranstaltungsmanager, Buddy-Programm für internationale Studierende, eigenes DAAD-Stipendium WS 2016.">Veranstaltungsmanager, Buddy-Programm für internationale Studierende, eigenes DAAD-Stipendium WS 2016.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="interessen">
+    <div class="block-head">
+      <h2 class="section-title" data-en="Outside of Work" data-de="Abseits der Arbeit">Abseits der Arbeit</h2>
+    </div>
+    <div class="interests-grid">
+      <div class="interest">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 15c2.2-2.6 4.4-2.6 6.6 0s4.4 2.6 6.6 0 4.4-2.6 6.6 0"></path><path d="M2 19c2.2-2.6 4.4-2.6 6.6 0s4.4 2.6 6.6 0 4.4-2.6 6.6 0"></path></svg>
+        <span data-en="PADI Open Water diving certification" data-de="PADI Open Water Tauchausbildung">PADI Open Water Tauchausbildung</span>
+      </div>
+      <div class="interest">
+        <span class="icon icon-deer" aria-hidden="true"></span>
+        <span data-en="Hunting &amp; wildlife-area work" data-de="Jagd- und Revierarbeiten">Jagd- und Revierarbeiten</span>
+      </div>
+      <div class="interest">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 21V9l8-5 8 5v12"></path><path d="M9 21v-6h6v6"></path></svg>
+        <span data-en="Woodworking, loft beds &amp; model building" data-de="Holzarbeiten, Hochbett- &amp;amp; Modellbau">Holzarbeiten, Hochbett- &amp; Modellbau</span>
+      </div>
+      <div class="interest">
+        <svg class="icon" viewBox="2.5 1 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="7.5" y="9" width="10" height="13" rx="1.5"></rect><path d="M9.5 9V5.5h5V9"></path><path d="M10.5 3.5h3"></path><path d="M18 4c1 1.2 1.4 2 1.6 3M19 3.2c1.2 1 1.7 1.8 2 3M16.7 4.8c.8 1 1.1 1.7 1.3 2.6"></path></svg>
+        <span data-en="Street-art presence worldwide" data-de="Straßenkunstpräsenz weltweit">Straßenkunstpräsenz weltweit</span>
+      </div>
+      <div class="interest">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M9 3v18M15 3v18M3 9h18M3 15h18"></path></svg>
+        <span data-en="Speedcubing" data-de="Speedcubing">Speedcubing</span>
+      </div>
+      <div class="interest">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="7" r="2.4"></circle><path d="M2 19c0-3.3 2-5.7 4-5.7s4 2.4 4 5.7"></path><circle cx="18" cy="7" r="2.4"></circle><path d="M14 19c0-3.3 2-5.7 4-5.7s4 2.4 4 5.7"></path><circle cx="12" cy="14" r="1.6" fill="currentColor" stroke="none"></circle></svg>
+        <span data-en="Married" data-de="Verheiratet">Verheiratet</span>
+      </div>
+      <div class="interest">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="7" y1="21" x2="18" y2="10"></line><ellipse cx="19.5" cy="8.5" rx="2" ry="1.3" transform="rotate(45 19.5 8.5)"></ellipse></svg>
+        <span data-en="Designing &amp; sewing own clothes" data-de="Eigene Klamotten designen &amp;amp; nähen">Eigene Klamotten designen &amp; nähen</span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="pf">
+    <span>Arturo Iturriaga García · Wiesbaden</span>
+    <span data-en="Images from my own collection, original photos from the respective projects." data-de="Bilder aus eigenem Bestand, Original-Fotos von den jeweiligen Einsätzen.">Bilder aus eigenem Bestand, Original-Fotos von den jeweiligen Einsätzen.</span>
+  </footer>
+
+</div>
+
+<div class="edit-savebar" id="editSaveBar" hidden="">
+  <span><span id="editCount">0</span> Bild(er) zum Entfernen markiert</span>
+  <button id="editCancelBtn" type="button" class="edit-cancel">Abbrechen</button>
+  <button id="editSaveBtn" type="button" class="edit-save" disabled="">Speichere …</button>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Schließen">✕</button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Vorheriges Bild">‹</button>
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Nächstes Bild">›</button>
+  <figure>
+    <img loading="lazy" decoding="async" id="lbImg" src="images/music-3.jpg" alt="Arturo als Sänger und Bassist auf der Bühne mit Band">
+    <figcaption id="lbCaption">Als Sänger und Bassist auf der Bühne, mit Band.</figcaption>
+    <div class="lb-count" id="lbCount">1 / 6</div>
+  </figure>
+</div>
+
+<script>
+document.querySelectorAll('.proj').forEach(function(d){
+  d.addEventListener('toggle', function(){
+    if(d.open){
+      var before = d.getBoundingClientRect().top;
+      document.querySelectorAll('.proj').forEach(function(o){ if(o!==d) o.open=false; });
+      var after = d.getBoundingClientRect().top;
+      if(after !== before){
+        var prevBehavior = document.documentElement.style.scrollBehavior;
+        document.documentElement.style.scrollBehavior = 'auto';
+        window.scrollBy(0, after - before);
+        document.documentElement.style.scrollBehavior = prevBehavior;
+      }
+    }
+  });
+});
+
+var galleries = {};
+document.querySelectorAll('[data-gallery]').forEach(function(btn){
+  var g = btn.getAttribute('data-gallery');
+  var img = btn.querySelector('img');
+  var caption = '';
+  var scope = btn.closest('.p-gallery, .workshop-card');
+  if(scope){
+    var container = btn.parentElement.classList.contains('pair') ? btn.parentElement : btn;
+    var next = container.nextElementSibling;
+    if(next && next.tagName === 'FIGCAPTION') caption = next.textContent;
+  }
+  if(!galleries[g]) galleries[g] = [];
+  galleries[g].push({src: img.getAttribute('src'), alt: img.getAttribute('alt'), caption: caption});
+});
+
+var lb = document.getElementById('lightbox');
+var lbImg = document.getElementById('lbImg');
+var lbCaption = document.getElementById('lbCaption');
+var lbCount = document.getElementById('lbCount');
+var curGallery = null, curIndex = 0;
+
+function openLightbox(g, i){
+  curGallery = g; curIndex = i;
+  render();
+  lb.classList.add('open');
+}
+function render(){
+  var items = galleries[curGallery];
+  var item = items[curIndex];
+  lbImg.src = item.src; lbImg.alt = item.alt;
+  lbCaption.textContent = item.caption || item.alt;
+  lbCount.textContent = items.length > 1 ? (curIndex+1) + ' / ' + items.length : '';
+}
+function closeLightbox(){ lb.classList.remove('open'); }
+function step(delta){
+  var items = galleries[curGallery];
+  curIndex = (curIndex + delta + items.length) % items.length;
+  render();
+}
+
+document.querySelectorAll('[data-gallery]').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    openLightbox(btn.getAttribute('data-gallery'), parseInt(btn.getAttribute('data-index'),10));
+  });
+});
+document.getElementById('lbClose').addEventListener('click', closeLightbox);
+document.getElementById('lbPrev').addEventListener('click', function(){ step(-1); });
+document.getElementById('lbNext').addEventListener('click', function(){ step(1); });
+lb.addEventListener('click', function(e){ if(e.target === lb) closeLightbox(); });
+document.addEventListener('keydown', function(e){
+  if(!lb.classList.contains('open')) return;
+  if(e.key === 'Escape') closeLightbox();
+  if(e.key === 'ArrowLeft') step(-1);
+  if(e.key === 'ArrowRight') step(1);
+});
+
+// ---------- Skill filter ----------
+(function(){
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.skillcat .chips span'));
+  var projects = Array.prototype.slice.call(document.querySelectorAll('#projekte > details.proj'));
+  projects.forEach(function(p){ blobFor(p); }); // cache German-only text before any translation runs
+  var filterBar = document.getElementById('filterBar');
+  var filterLabel = document.getElementById('filterLabel');
+  var filterEmpty = document.getElementById('filterEmpty');
+  var clearBtn = document.getElementById('clearFilter');
+  var clearBtn2 = document.getElementById('clearFilter2');
+  var activeChip = null;
+
+  var STOPWORDS = {'mit':1,'und':1,'für':1,'bei':1,'von':1,'nach':1,'oder':1,'auch':1};
+
+  // Arturo-curated skill -> project associations (exact chip text match).
+  // Falls back to substring text matching below for any chip not listed here.
+  var ALL_IDS = ['seilerei','dachser','sommerwerft','maratone','theater','wilhelm','denhaag','vw','vinokilo','carissma-sw','carissma-hw','oportun'];
+  var SKILL_MAP = {
+    'Starkstrom / CEE-Verteilung': ['seilerei','sommerwerft'],
+    'PCB-Löten': ['carissma-hw','vw','theater','seilerei'],
+    'Prompt Engineering': ['seilerei'],
+    'KI-gestützte Code-Tools': ['seilerei'],
+    'HTML': ['seilerei','carissma-sw'],
+    'VHDL': ['carissma-hw'],
+    'C / C++': ['vw','carissma-sw'],
+    'Technische Produktionsleitung': ['sommerwerft'],
+    'Bühnenbau / Truss': ['maratone','theater'],
+    'Moving Lights / DMX': ['theater','maratone'],
+    'Rigging': ['maratone','theater'],
+    'Manitou / Hebebühne': ['denhaag','theater'],
+    'Tontechniker': ['sommerwerft','maratone','theater'],
+    'Mehrsprachiger technischer Support': ['vw','oportun'],
+    'Internationale Beschaffung': ['seilerei','vinokilo','vw'],
+    'Zollabwicklung': ['seilerei','vinokilo'],
+    'Technische Dokumentation': ['vw','carissma-sw','carissma-hw'],
+    'Projektleitung': ['seilerei','dachser','vinokilo','sommerwerft'],
+    'Spanisch, Muttersprache': ['seilerei','sommerwerft','theater','denhaag','vw','vinokilo'],
+    'Englisch, C2': ALL_IDS,
+    'Deutsch, C1': ['seilerei','dachser','sommerwerft','maratone','theater','wilhelm','denhaag','vw','vinokilo','carissma-sw','carissma-hw'],
+    'Russisch / Hindi, Grundkenntnisse': [],
+    'Führerschein B': ['seilerei','dachser','sommerwerft','maratone','theater','wilhelm','denhaag','vw','vinokilo','carissma-sw','carissma-hw'],
+    'Staplerschein': ['seilerei','maratone','theater','dachser','denhaag'],
+    'Hebebühnenschein': ['seilerei','dachser','denhaag']
+  };
+
+  function normalize(s){ return (s || '').toLowerCase().replace(/[^a-z0-9äöüß]+/g, ' '); }
+  function keywordsFor(text){
+    return normalize(text).split(/\s+/).filter(function(w){ return w.length >= 4 && !STOPWORDS[w]; });
+  }
+  function blobFor(proj){
+    if(!proj._blob) proj._blob = normalize(proj.textContent);
+    return proj._blob;
+  }
+
+  function applyFilter(chip){
+    var text = (chip.dataset && chip.dataset.key) ? chip.dataset.key : chip.textContent.trim();
+    var mapped = SKILL_MAP[text];
+    var visible = 0;
+    if(mapped){
+      projects.forEach(function(proj){
+        var match = mapped.indexOf(proj.getAttribute('data-id')) !== -1;
+        proj.classList.toggle('filtered-out', !match);
+        if(match) visible++;
+      });
+    } else {
+      var words = keywordsFor(text);
+      projects.forEach(function(proj){
+        var blob = blobFor(proj);
+        var match = words.length === 0 ? true : words.some(function(w){ return blob.indexOf(w) !== -1; });
+        proj.classList.toggle('filtered-out', !match);
+        if(match) visible++;
+      });
+    }
+    filterLabel.textContent = chip.textContent.trim();
+    filterBar.classList.add('active');
+    filterEmpty.classList.toggle('show', visible === 0);
+    document.getElementById('projekte').scrollIntoView({behavior:'smooth', block:'start'});
+  }
+  function clearFilter(){
+    projects.forEach(function(proj){ proj.classList.remove('filtered-out'); });
+    filterBar.classList.remove('active');
+    filterEmpty.classList.remove('show');
+    if(activeChip){ activeChip.classList.remove('active'); activeChip = null; }
+  }
+
+  chips.forEach(function(chip){
+    chip.addEventListener('click', function(){
+      if(activeChip === chip){ clearFilter(); return; }
+      if(activeChip) activeChip.classList.remove('active');
+      activeChip = chip;
+      chip.classList.add('active');
+      applyFilter(chip);
+    });
+  });
+  clearBtn.addEventListener('click', clearFilter);
+  clearBtn2.addEventListener('click', clearFilter);
+})();
+
+// ---------- Theme toggle ----------
+(function(){
+  var root = document.documentElement;
+  try{
+    if(localStorage.getItem('pf-theme') === 'light') root.setAttribute('data-theme','light');
+  }catch(e){}
+  function updateLabel(){
+    var isLight = root.getAttribute('data-theme') === 'light';
+    document.getElementById('ttLabel').textContent = isLight ? 'Dunkel' : 'Hell';
+  }
+  updateLabel();
+  document.getElementById('themeToggle').addEventListener('click', function(){
+    var isLight = root.getAttribute('data-theme') === 'light';
+    if(isLight){ root.removeAttribute('data-theme'); } else { root.setAttribute('data-theme','light'); }
+    try{ localStorage.setItem('pf-theme', isLight ? 'dark' : 'light'); }catch(e){}
+    updateLabel();
+  });
+})();
+
+// ---------- Image editor (mark for removal, then save as a new version) ----------
+(function(){
+  var editBtn = document.getElementById('editImagesBtn');
+  var saveBar = document.getElementById('editSaveBar');
+  var saveBtn = document.getElementById('editSaveBtn');
+  var cancelBtn = document.getElementById('editCancelBtn');
+  var countEl = document.getElementById('editCount');
+  var editing = false;
+
+  function allThumbs(){ return Array.prototype.slice.call(document.querySelectorAll('button.thumb[data-gallery]')); }
+
+  function galleryGroup(btn){
+    var grid = btn.closest('.p-grid');
+    if(!grid) return null;
+    var mainEl = grid.querySelector(':scope > .p-gallery');
+    var extraEl = grid.querySelector(':scope > .p-gallery-extra');
+    if(!mainEl) return null;
+    return {grid: grid, mainEl: mainEl, extraEl: extraEl};
+  }
+  function refreshStar(btn, star){
+    var inExtra = !!btn.closest('.p-gallery-extra');
+    star.textContent = inExtra ? '↑' : '↓';
+    star.setAttribute('aria-label', inExtra ? 'Zum Hauptbild machen' : 'Zum Kleinbild machen');
+    star.title = inExtra ? 'Zum Hauptbild machen' : 'Zum Kleinbild machen';
+  }
+  function toggleRole(btn){
+    var group = galleryGroup(btn);
+    if(!group) return;
+    var g = btn.getAttribute('data-gallery');
+    var inExtra = !!btn.closest('.p-gallery-extra');
+    if(inExtra){
+      group.mainEl.appendChild(btn);
+      if(!(btn.nextElementSibling && btn.nextElementSibling.tagName === 'FIGCAPTION')){
+        var fc = document.createElement('figcaption');
+        fc.textContent = btn.querySelector('img').getAttribute('alt') || '';
+        btn.after(fc);
+      }
+    } else {
+      var next = btn.nextElementSibling;
+      var extraEl = group.extraEl;
+      if(!extraEl){
+        extraEl = document.createElement('div');
+        extraEl.className = 'p-gallery-extra';
+        group.mainEl.insertAdjacentElement('afterend', extraEl);
+      }
+      extraEl.appendChild(btn);
+      if(next && next.tagName === 'FIGCAPTION') next.remove();
+    }
+    var star = btn.querySelector('.mark-star');
+    if(star) refreshStar(btn, star);
+  }
+  function addOverlays(){
+    allThumbs().forEach(function(btn){
+      if(btn.querySelector('.mark-x')) return;
+      var x = document.createElement('span');
+      x.className = 'mark-x';
+      x.setAttribute('role','button');
+      x.setAttribute('aria-label','Zum Entfernen markieren');
+      x.textContent = '✕';
+      x.addEventListener('click', function(e){
+        e.stopPropagation(); e.preventDefault();
+        btn.classList.toggle('marked-remove');
+        updateCount();
+      });
+      btn.appendChild(x);
+      if(galleryGroup(btn)){
+        var star = document.createElement('span');
+        star.className = 'mark-star';
+        star.setAttribute('role','button');
+        refreshStar(btn, star);
+        star.addEventListener('click', function(e){
+          e.stopPropagation(); e.preventDefault();
+          toggleRole(btn);
+        });
+        btn.appendChild(star);
+      }
+      btn.addEventListener('click', editClickGuard, true);
+    });
+  }
+  function editClickGuard(e){ if(editing && !(e.target.classList.contains('mark-x') || e.target.classList.contains('mark-star'))){ e.stopPropagation(); e.preventDefault(); } }
+  function removeOverlays(){
+    document.querySelectorAll('.mark-x, .mark-star').forEach(function(x){ x.remove(); });
+    allThumbs().forEach(function(btn){ btn.removeEventListener('click', editClickGuard, true); btn.classList.remove('marked-remove'); });
+  }
+  function updateCount(){
+    var n = document.querySelectorAll('button.thumb.marked-remove').length;
+    countEl.textContent = n;
+    saveBtn.disabled = false;
+  }
+
+  editBtn.addEventListener('click', function(){
+    editing = true;
+    document.body.classList.add('editing-images');
+    addOverlays();
+    saveBar.hidden = false;
+    editBtn.hidden = true;
+    updateCount();
+  });
+  cancelBtn.addEventListener('click', function(){
+    editing = false;
+    document.body.classList.remove('editing-images');
+    removeOverlays();
+    saveBar.hidden = true;
+    editBtn.hidden = false;
+  });
+
+  function renumberGalleries(){
+    var seen = {};
+    allThumbs().forEach(function(btn){
+      var g = btn.getAttribute('data-gallery');
+      seen[g] = (seen[g] || 0);
+      btn.setAttribute('data-index', seen[g]);
+      seen[g]++;
+    });
+    galleries = {};
+    allThumbs().forEach(function(btn){
+      var g = btn.getAttribute('data-gallery');
+      var img = btn.querySelector('img');
+      var caption = '';
+      var container = btn.parentElement.classList.contains('pair') ? btn.parentElement : btn;
+      var next = container.nextElementSibling;
+      if(next && next.tagName === 'FIGCAPTION') caption = next.textContent;
+      if(!galleries[g]) galleries[g] = [];
+      galleries[g].push({src: img.getAttribute('src'), alt: img.getAttribute('alt'), caption: caption});
+    });
+  }
+
+  saveBtn.addEventListener('click', function(){
+    var marked = document.querySelectorAll('button.thumb.marked-remove');
+    marked.forEach(function(btn){
+      var parentIsPair = btn.parentElement.classList.contains('pair');
+      var next = btn.nextElementSibling;
+      btn.remove();
+      if(!parentIsPair && next && next.tagName === 'FIGCAPTION') next.remove();
+    });
+    renumberGalleries();
+    editing = false;
+    document.body.classList.remove('editing-images');
+    removeOverlays();
+    saveBar.hidden = true;
+    editBtn.hidden = false;
+
+    saveBtn.disabled = true;
+    saveBtn.textContent = 'Speichere …';
+    publishChanges();
+  });
+
+  async function publishChanges(){
+    try{
+      var artifact = window.claude && window.claude.use ? await window.claude.use('artifact') : null;
+      if(!artifact){
+        alert('Speichern ist in dieser Ansicht nicht verfügbar. Die Änderungen bleiben nur bis zum Neuladen der Seite sichtbar.');
+        resetSaveBtn();
+        return;
+      }
+      var html = '<!doctype html>\n' + document.documentElement.outerHTML;
+      var res = await artifact.publish(html);
+      if(res && res.ok === false){
+        alert('Speichern hat nicht geklappt (' + (res.error || 'unbekannter Fehler') + '). Bitte nochmal versuchen.');
+      }
+    }catch(err){
+      alert('Speichern hat nicht geklappt. Bitte nochmal versuchen.');
+    }
+    resetSaveBtn();
+  }
+  function resetSaveBtn(){
+    saveBtn.textContent = 'Änderungen speichern';
+  }
+
+  if(window.claude && window.claude.use){
+    window.claude.use('artifact').then(function(a){
+      if(!a) editBtn.hidden = true;
+    }).catch(function(){ editBtn.hidden = true; });
+  } else {
+    editBtn.hidden = true;
+  }
+})();
+
+// ---------- Language toggle (DE default, EN via data-en) ----------
+(function(){
+  var LKEY = 'pf-lang';
+  function getLang(){ try{ return localStorage.getItem(LKEY) || 'de'; }catch(e){ return 'de'; } }
+  function setLang(l){ try{ localStorage.setItem(LKEY, l); }catch(e){} }
+  function applyLang(lang){
+    document.documentElement.setAttribute('lang', lang === 'en' ? 'en' : 'de');
+    document.querySelectorAll('[data-en]').forEach(function(el){
+      if(el.dataset.de === undefined) el.dataset.de = el.innerHTML;
+      el.innerHTML = lang === 'en' ? el.dataset.en : el.dataset.de;
+    });
+    var lbl = document.getElementById('langLabel');
+    if(lbl) lbl.textContent = lang === 'en' ? 'DE' : 'EN';
+  }
+  var lang = getLang();
+  applyLang(lang);
+  var btn = document.getElementById('langToggle');
+  if(btn){
+    btn.addEventListener('click', function(){
+      var next = getLang() === 'en' ? 'de' : 'en';
+      setLang(next);
+      applyLang(next);
+    });
+  }
+})();
+</script>
+</body></html>
