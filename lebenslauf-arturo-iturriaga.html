@@ -11,7 +11,7 @@
     font-size: 8.6pt; line-height: 1.27; color:#1c1c1c; margin:0 auto;
     width:210mm; background:#fff; box-shadow:0 0 18px rgba(0,0,0,.15);
   }
-  @media print{ html{background:#fff;} body{margin:0; box-shadow:none;} }
+  @media print{ html{background:#fff;} body{margin:0; box-shadow:none;} *{-webkit-print-color-adjust:exact; print-color-adjust:exact; color-adjust:exact;} }
 
   /* Kopf im Farbton der Portfolio-Webseite (--teal) */
   .header{
@@ -20,7 +20,7 @@
   }
   .header h1{
     font-family:'Barlow Semi Condensed','Work Sans',Arial,sans-serif;
-    margin:0 0 3px; font-size:20pt; font-weight:700; letter-spacing:.015em;
+    margin:-5px 0 3px; font-size:20pt; font-weight:700; letter-spacing:.015em;
   }
   .header .role{font-size:9.8pt; color:#d3eae6; margin-bottom:5px;}
   .header .born{font-family:'IBM Plex Mono',monospace; font-size:8pt; color:#a6cec7;}
@@ -68,6 +68,8 @@
   .edu-org{font-size:8.1pt; color:#333; margin-top:1px;}
   .edu-meta{font-family:'IBM Plex Mono',monospace; font-size:7.9pt; color:#444;}
   .edu-line{font-size:8pt; margin-top:1px; color:#444;}
+  .edu-abschluss{display:flex; justify-content:space-between; gap:8px; font-size:8pt; margin-top:1px; color:#444;}
+  .edu-abschluss .note{font-weight:600; white-space:nowrap;}
   .interest-block p{font-size:8.2pt; margin:0 0 5px; line-height:1.45;}
   .interest-block b{font-weight:700; color:#8a5316;}
   /* verteilt die Zeilen gleichmaessig, damit am Ende keine ein- bis zweiwoertigen Zeilen stehen */
@@ -181,8 +183,9 @@
     <h2>Ausbildung</h2>
     <div class="edu-degree">Electronic and Computer Engineering</div>
     <div class="edu-org">Tecnológico de Monterrey, Guadalajara, MX</div>
-    <div class="edu-meta">08/2013 – 08/2016 &nbsp;·&nbsp; Note 1,6</div>
-    <div class="edu-line">Abgeschlossen, mit Forschungsaufenthalt an der TH Ingolstadt</div>
+    <div class="edu-meta">08/2013 – 08/2016</div>
+    <div class="edu-abschluss"><span>Abgeschlossen</span><span class="note">Note 1,6</span></div>
+    <div class="edu-line">mit Forschungsaufenthalt an der TH Ingolstadt</div>
 
     <div class="edu-degree">Allgemeine Hochschulreife</div>
     <div class="edu-org">Instituto de Ciencias, Zapopan, MX</div>
