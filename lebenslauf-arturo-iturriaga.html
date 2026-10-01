@@ -8,7 +8,7 @@
   html{background:#dcdcdc;}
   body{
     font-family:'Work Sans', Calibri, Carlito, Arial, sans-serif;
-    font-size: 8.6pt; line-height: 1.30; color:#1c1c1c; margin:0 auto;
+    font-size: 8.6pt; line-height: 1.27; color:#1c1c1c; margin:0 auto;
     width:210mm; background:#fff; box-shadow:0 0 18px rgba(0,0,0,.15);
   }
   @media print{ html{background:#fff;} body{margin:0; box-shadow:none;} }
@@ -42,7 +42,7 @@
   .col-right h2{margin-top:13px;}
   .col-right h2:first-child{margin-top:0;}
 
-  .job{margin-bottom:5px; page-break-inside:avoid;}
+  .job{margin-bottom:4px; page-break-inside:avoid;}
   .job .title{font-weight:700; font-size:9.6pt; color:#141414;}
   .job .title .client{color:#8a5316; white-space:nowrap;}
   .job .title .sep{color:#8fc4bb; font-weight:500; padding:0 2px;}
@@ -131,9 +131,9 @@
       <div class="title"><span class="client">Majorel Berlin GmbH</span><span class="sep">|</span>E-Mobilitätsspezialist</div>
       <div class="meta">01/2023 – 04/2025 &nbsp;·&nbsp; Berlin, europaweit &nbsp;·&nbsp; Festanstellung</div>
       <ul>
-        <li>Remote Service im technischen Außendienst: systematische Fehlerdiagnose über DTC-Fehlercodes, Auswertung von Log- und Felddaten sowie technisches Berichtswesen.</li>
-        <li>Mehrsprachiger technischer Support für VW-Flexpole-Schnellladesäulen mit einer kombinierten Systemleistung von 250 kW.</li>
-        <li>Vor-Ort-Einsätze und Schulungen in Wolfsburg, Austausch von Hochleistungsakkus und Batteriemanagementsystemen.</li>
+        <li>Ticket- und Fehlerdiagnose über Salesforce: DTC-Fehlercodes und JSON-Felddaten per eigenem Skript ausgewertet, firmeninterne Wissensdatenbank von wenigen auf über 100 dokumentierte Fälle erweitert.</li>
+        <li>Remote-Zugriff über Cisco AnyConnect VPN, Datenauswertung von BMS- und CAN-Bus-Kommunikation zwischen Ladesäule und Fahrzeug.</li>
+        <li>Mehrsprachiger technischer Support für VW-Flexpole-Schnellladesäulen mit 250 kW Systemleistung, Vor-Ort-Einsätze und Schulungen in Wolfsburg, Austausch von Hochleistungsakkus.</li>
       </ul>
     </div>
 
@@ -150,7 +150,7 @@
       <div class="meta">12/2015 – 03/2018 &nbsp;·&nbsp; Ingolstadt &nbsp;·&nbsp; Praktikum &amp; Festanstellung</div>
       <ul>
         <li>Eigenes Fußgängererkennungs- und Pfadprädiktionsmodell entwickelt (OpenCV, C++, Java) im Forschungsverbund mit Audi und BMW, Ko-Autor eines Fachartikels.</li>
-        <li>Hardware-Entwicklung im Team: luftdruckgesteuerter Roboter sowie eigene Microcontroller-/FPGA-Prototypen.</li>
+        <li>Hardware-Entwicklung im Team: luftdruckgesteuerter Roboter, eigene Microcontroller-/FPGA-Prototypen, CAN-Bus-Datenauswertung zur Sensorvalidierung.</li>
       </ul>
     </div>
   </div>
@@ -158,7 +158,7 @@
   <div class="col-right">
     <h2>Kenntnisse &amp; Tools</h2>
     <div class="chips">
-      <span>Java</span><span>C/C++</span><span>Matlab</span><span>Verilog</span><span>VHDL</span><span>OpenCV</span><span>AOSP</span><span>HTML</span><span>Prompt Engineering</span><span>KI-Code-Tools</span><span>MS Office</span><span>Logic Pro X</span><span>Mainstage 3</span><span>Cubase</span><span>Adobe Ps/Pr/Id/Ai</span><span>Salesforce</span>
+      <span>Java</span><span>C/C++</span><span>Matlab</span><span>Verilog</span><span>VHDL</span><span>OpenCV</span><span>AOSP</span><span>HTML</span><span>Prompt Engineering</span><span>KI-Code-Tools</span><span>MS Office</span><span>Logic Pro X</span><span>Mainstage 3</span><span>Cubase</span><span>Adobe Ps/Pr/Id/Ai</span><span>Salesforce</span><span>Cisco AnyConnect VPN</span>
     </div>
 
     <h2>Sprachen</h2>
@@ -172,15 +172,10 @@
     </div>
 
     <h2>Ausbildung</h2>
-    <div class="edu-degree">Media: Conception and Production</div>
-    <div class="edu-org">Hochschule RheinMain, Wiesbaden</div>
-    <div class="edu-meta">04/2018 – 09/2024</div>
-    <div class="edu-line">o. A., aus arbeitstechnischen Gründen abgebrochen</div>
-
     <div class="edu-degree">Electronic and Computer Engineering</div>
     <div class="edu-org">Tecnológico de Monterrey, Guadalajara, MX</div>
     <div class="edu-meta">08/2013 – 08/2016 &nbsp;·&nbsp; Note 1,6</div>
-    <div class="edu-line">mit Forschungsaufenthalt an der TH Ingolstadt</div>
+    <div class="edu-line">Abgeschlossen, mit Forschungsaufenthalt an der TH Ingolstadt</div>
 
     <div class="edu-degree">Allgemeine Hochschulreife</div>
     <div class="edu-org">Instituto de Ciencias, Zapopan, MX</div>
@@ -189,7 +184,7 @@
 
     <h2>Werkstatt &amp; Eigene Projekte</h2>
     <div class="interest-block">
-      <p><b>Produktentwicklung:</b> eigene Prototypen zwischen Elektronik und Musik, vom Schaltungsentwurf bis zum fertigen Gerät: „Trombone Hero“ mit Time-of-Flight-Sensor, Live-Noten-Display für Blechbläser, MIDI-Synthesizer und Sound-to-Light-System.</p>
+      <p><b>Produktentwicklung:</b> „Posaune Hero“ (seit 2024), eigenes Hardware-, Firmware- und Web-App-System für Blechbläser: ESP32-C3 Mini mit VL53L0X-Time-of-Flight-Sensor und Bluetooth BLE, Progressive Web App, MIDI-Synthesizer und Sound-to-Light-System.</p>
       <p><b>Handwerk:</b> Elektro-Infrastruktur, Hochbett- und Messebau, u.a. für Commerzbank, sowie nähbare LED-Wearables.</p>
       <p><b>Musik:</b> freiberuflicher Musiker &amp; Medienproduzent (seit 2017), über&nbsp;250&nbsp;Veranstaltungen; Auftritte u.a. Glastonbury, Fusion Festival.</p>
       <p><b>Abseits der Arbeit:</b> PADI Open Water Tauchausbildung, Jagd- und Revierarbeiten, Straßenkunstpräsenz weltweit, Speedcubing, eigene Kleidung designen &amp; nähen.</p>
